@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HTML标题和段落</title>
+    </head>
+    <style>
+        html {}
+        section:nth-child(-n + 4) {
+            text-align: center;
+        }
+        h2,
+        h3 {
+            margin-top: 50px;
+        }
+        body {
+            margin: 0;
+            color: white;
+            background-image: url('./images/text-bg.jpg');
+            background-size: 100% 100%;
+            background-attachment: fixed;
+        }
+        section {
+            padding: 10px;
+        }
+        dt {
+            font-weight: bolder;
+        }
+    </style>
+    <body>
+
+        <section>
+            <small>标题的使用示例</small>
+            <!-- 定位 -->
+            <h1 id="top">诗经</h1>
+            <h2>国风·周南</h2>
+            <h3>
+                <a href="https://so.gushiwen.cn/shiwenv_4c5705b99143.aspx" title="诗经关雎详细内容">关雎</a>
+            </h3>
+            <small>佚名 〔先秦〕</small>
+            <p>
+                <strong>关关雎鸠</strong>，在河之洲。窈窕淑女，君子好逑。</p>
+            <p>
+                <b>参差荇菜</b>，左右流之。窈窕淑女，寤寐求之。</p>
+            <p>
+                <i>求之不得</i>，寤寐思服。悠哉悠哉，辗转反侧。</p>
+            <p>
+                <u>参差荇菜</u>，左右采之。窈窕淑女，琴瑟友之。</p>
+            <p>
+                <del>参差荇菜</del>，左右芼之。窈窕淑女，钟鼓乐之。</p>
+
+            <h3>葛覃</h3>
+            <small>佚名 〔先秦〕</small>
+            <p>葛之覃兮，施于中谷，维叶萋萋。黄鸟于飞，集于灌木，其鸣喈喈。</p>
+            <p>葛之覃兮，施于中谷，维叶莫莫。是刈是濩，为絺为綌，服之无斁。</p>
+            <p>言告师氏，言告言归。薄污我私。薄浣我衣。害浣害否？归宁父母。</p>
+
+            <p>……</p>
+
+            <h2>国风·召南</h2>
+            <h3>鹊巢</h3>
+            <small>佚名 〔先秦〕</small>
+            <p>维鹊有巢，维鸠居之。之子于归，百两御之。</p>
+            <p>维鹊有巢，维鸠方之。之子于归，百两将之。</p>
+            <p>维鹊有巢，维鸠盈之。之子于归，百两成之。</p>
+
+            <h3>采蘩</h3>
+            <small>佚名 〔先秦〕</small>
+            <p>于以采蘩？于沼于沚。于以用之？公侯之事。</p>
+            <p>于以采蘩？于涧之中。于以用之？公侯之宫。</p>
+            <p>被之僮僮，夙夜在公。被之祁祁，薄言还归。</p>
+            <p>……</p>
+        </section>
+        <hr>
+        <hr>
+
+        <section>
+            <small>超链接</small>
+            <p>
+                <a href="./index.html" title="返回主页面">回到主页</a>
+            </p>
+            <!-- 返回指定id位置 -->
+            <p>
+                <a href="#top" title="返回顶部">返回顶部</a>
+            </p>
+            <!-- 下载：文件名是文件的本名 -->
+            <p>
+                <a href="./images/text-bg.jpg" download>下载背景图片(原图)</a>
+            </p>
+            <!-- 下载：文件名是指定文件名 -->
+            <p>
+                <a href="./images/text-bg.jpg" download="2022年2月6日">下载背景图片(.jfif)</a>
+            </p>
+            <p>
+                <a href="mailto:3108592570@qq.com?subject=主题：HTML学习——春晓&body=你好，我是在这里发送的" title="发送内容：(主题：HTML学习——春晓 你好，我是在这里发送的)">给作者发送电子邮件</a>
+            </p>
+        </section>
+        <hr>
+        <hr>
+        <section>
+            <dl>
+                <dh>描述列表表头</dh>
+                <dt>术语</dt>
+                <dd>描述术语</dd>
+                <br>
+                <dt>内心独白</dt>
+                <dd>戏剧中，某个角色对自己的内心活动或感受进行念白表演，这些台词只面向观众，而其他角色不会听到。</dd>
+                <dt>语言独白</dt>
+                <dd>戏剧中，某个角色把自己的想法直接进行念白表演，观众和其他角色都可以听到。</dd>
+                <dt>旁白</dt>
+                <dd>戏剧中，为渲染幽默或戏剧性效果而进行的场景之外的补充注释念白，只面向观众，内容一般都是角色的感受、想法、以及一些背景信息等。</dd>
+            </dl>
+            <hr>
+            <!-- 块引用 -->
+            <blockquote cite="https://hanyu.baidu.com/shici/detail?pid=ce590035f57411e5b0c8c8e0eb15ce01&from=kg0&highlight=%E5%AD%A6%E8%80%8C%E6%97%B6%E4%B9%A0%E4%B9%8B%EF%BC%8C%E4%B8%8D%E4%BA%A6%E4%B9%90%E4%B9%8E">
+                <p>子曰：“学而时习之，不亦说乎”。</p>
+            </blockquote>
+
+            <hr>
+            <!-- 行内引用 -->
+            <p>老师教育我们——<q cite="https://hanyu.baidu.com/shici/detail?pid=ce590035f57411e5b0c8c8e0eb15ce01&from=kg0&highlight=%E5%AD%A6%E8%80%8C%E6%97%B6%E4%B9%A0%E4%B9%8B%EF%BC%8C%E4%B8%8D%E4%BA%A6%E4%B9%90%E4%B9%8E">己所不欲，勿施于人。</q>
+            </p>
+
+            <hr>
+            <!-- 引文 -->
+            <p>你好！欢迎访问我的激励网页！<a href="http://www.brainyquote.com/quotes/authors/c/confucius.html">
+                    <cite>孔子</cite>
+                </a>曰：</p>
+            <blockquote cite="https://zh.wikipedia.org/zh-hans/孔子">
+                <p>譬如为山，未成一篑，止，吾止也。譬如平地，虽覆一篑，进，吾往也。</p>
+            </blockquote>
+            <p>要保持乐观，<q cite="http://www.affirmationsforpositivethinking.com/">不要说泄气的话</q>。（源自
+                <a href="http://www.affirmationsforpositivethinking.com/">
+                    <cite>Affirmations for Positive Thinking</cite>
+                </a>。）</p>
+
+
+            <hr>
+
+            <!-- 标记联系方式 -->
+            <p>Contact the author of this page:</p>
+
+            <address>
+                <a href="mailto:jim@rock.com">jim@rock.com</a><br>
+                <a href="tel:+13115552368">(311) 555-2368</a>
+            </address>
+
+            <hr>
+            <!-- 化学方程式 -->
+            <p>C<sub>2</sub>H<sub>5</sub>OH</p>
+            <!-- x的二次方 -->
+            <p>x<sup>2</sup>
+            </p>
+
+            <hr>
+            <pre><code>
+                const para = document.querySelector('p');
+
+                para.onclick = function() {
+                  alert('噢，噢，噢，别点我了。');
+                }
+            </code></pre>
+        </section>
+        <hr>
+        <hr>
+
+    </body>
+</html>

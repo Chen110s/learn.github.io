@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>导航小作业（枪版）</title>
+        <style>
+            p {
+                font-size: large;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li onclick="aIndex()">主页</li>
+                    <li onclick="aPic()">图片</li>
+                    <li onclick="aSoc()">社交</li>
+                    <li onclick="aPro()">项目</li>
+                </ul>
+            </nav>
+        </header>
+        <article>
+            <h1>主页</h1>
+            <p>这是主页。</p>
+        </article>
+        <script>
+            let head = document.querySelector("article h1");
+            let content = document.querySelector("article p");
+            function aPic() {
+                head.textContent = '图片';
+                content.textContent = '这是图片。'
+            }
+            function aSoc() {
+                head.textContent = '社交';
+                content.textContent = '这是社交。'
+            }
+            function aPro() {
+                head.textContent = '项目';
+                content.textContent = '这是项目。'
+            }
+            function aIndex() {
+                head.textContent = '主页';
+                content.textContent = '这是主页。'
+            }
+        </script>
+    </body>
+</html>

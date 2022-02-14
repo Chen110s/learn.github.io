@@ -31,6 +31,7 @@ html{
 
 /* 给页面添加边框 背景色 */
 body{
+    background-image: url(../images/background.png);
     background-color: orange;
     margin: 0 10px;
     border: 3px solid;
