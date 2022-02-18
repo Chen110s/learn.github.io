@@ -1,5 +1,14 @@
-.content{
-    font-size:40px;
+html{
+    background-color: rgb(0,83,159);
+}
+
+/* 给页面添加边框 背景色 */
+body{
+    background-image: url(../images/background.png);
+    background-color: orange;
+    margin: 0 10px;
+    border: 3px solid;
+    padding: 10px;
 }
 
 /* 标题颜色 居中，加大，加阴影 */
@@ -25,16 +34,7 @@ ul li,p{
     font-weight: bold;
 }
 
-html{
-    background-color: rgb(0,83,159);
+footer{
+    font-weight: bolder;
+    font-size: xx-large;
 }
-
-/* 给页面添加边框 背景色 */
-body{
-    background-image: url(../images/background.png);
-    background-color: orange;
-    margin: 0 10px;
-    border: 3px solid;
-    padding: 10px;
-}
-

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table template</title>
+    <link href="./styles/minimal-table.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <h1>HTML table basics</h1>
+<table>
+    <h2>table 1</h2>
+    <tr>
+        <th>&nbsp;</th>
+        <th>table header 1</th>
+        <th>table header 2</th>
+        <th colspan="2">table header 3</th>
+    </tr>
+    <tr>
+        <th>table header 1</th>
+        <td>table data 1 1</td>
+        <td>table data 1 2</td>
+        <td>table data 1 3</td>
+        <td>table data 1 4</td>
+    </tr>
+    <tr>
+        <th rowspan="2">table header 2</th>
+        <td>table data 2 1</td>
+        <td>table data 2 2</td>
+        <td>table data 2 3</td>
+        <td>table data 2 4</td>
+    </tr>
+    <tr>
+        <td>table data 3 1</td>
+        <td>table data 3 2</td>
+        <td>table data 3 3</td>
+        <td>table data 3 4</td>            
+    </tr>
+</table>
+
+<table>
+    <h2>table 2</h2>
+    <colgroup>
+        <!-- 对应第一列 -->
+        <col>
+        <!-- 对应第二列 -->
+        <col>
+        <!-- 对应第三列 -->
+        <col style="background-color: aqua;">
+        <!-- 对应第四，第五列 -->
+        <col span="2" style="background-color: rgb(51, 255, 0);">
+    </colgroup>
+    <tr>
+        <th>&nbsp;</th>
+        <th>table header 1</th>
+        <th>table header 2</th>
+        <th colspan="2">table header 3</th>
+    </tr>
+    <tr>
+        <th>table header 1</th>
+        <td>table data 1 1</td>
+        <td>table data 1 2</td>
+        <td>table data 1 3</td>
+        <td>table data 1 4</td>
+    </tr>
+    <tr>
+        <th rowspan="2">table header 2</th>
+        <td>table data 2 1</td>
+        <td>table data 2 2</td>
+        <td>table data 2 3</td>
+        <td>table data 2 4</td>
+    </tr>
+    <tr>
+        <td>table data 3 1</td>
+        <td>table data 3 2</td>
+        <td>table data 3 3</td>
+        <td>table data 3 4</td>            
+    </tr>
+</table>
+
+</body>
+</html>
