@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HTML table</title>
+        <style>
+            table {
+                border-collapse: collapse;
+                border: 2px solid rgb(200, 200, 200);
+                letter-spacing: 1px;
+                font-size: 0.8rem;
+            }
+            td,
+            th {
+                border: 1px solid rgb(190, 190, 190);
+                padding: 10px 20px;
+            }
+            td {
+                text-align: center;
+            }
+            
+            caption {
+                padding: 10px;
+                
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <caption>表格标题（描述表格内容）</caption>
+            <tr>
+                <th>&nbsp;</th>
+                <th>table header 1</th>
+                <th>table header 2</th>
+                <th colspan="2">table header 3</th>
+            </tr>
+            <tr>
+                <th>table header 1</th>
+                <td>table data 1 1</td>
+                <td>table data 1 2</td>
+                <td>table data 1 3</td>
+                <td>table data 1 4</td>
+            </tr>
+            <tr>
+                <th rowspan="2">table header 2</th>
+                <td>table data 2 1</td>
+                <td>table data 2 2</td>
+                <td>table data 2 3</td>
+                <td>table data 2 4</td>
+            </tr>
+            <tr>
+                <td>table data 3 1</td>
+                <td>table data 3 2</td>
+                <td>table data 3 3</td>
+                <td>table data 3 4</td>
+            </tr>
+        </table>
+        <br>
+        <br>
+        <br>
+        <br>
+<table>
+    <caption>表格标题（描述表格内容）</caption>
+    <tfoot>
+        <tr>
+            <td colspan="2">解释</td>
+            <td colspan="3">相对于上表，此表添加了表结构。</td>
+        </tr>
+    </tfoot>
+    <tbody>
+        <tr>
+            <th>table header 1</th>
+            <td>table data 1 1</td>
+            <td>table data 1 2</td>
+            <td>table data 1 3</td>
+            <td>table data 1 4</td>
+        </tr>
+        <tr>
+            <th rowspan="2">table header 2</th>
+            <td>table data 2 1</td>
+            <td>table data 2 2</td>
+            <td>table data 2 3</td>
+            <td>table data 2 4</td>
+        </tr>
+        <tr>
+            <td>table data 3 1</td>
+            <td>table data 3 2</td>
+            <td>table data 3 3</td>
+            <td>table data 3 4</td>
+        </tr>
+    </tbody>
+    <thead>
+        <tr>
+            <th>&nbsp;</th>
+            <th>table header 1</th>
+            <th>table header 2</th>
+            <th colspan="2">table header 3</th>
+        </tr>
+    </thead>
+</table>
+
+<table>
+    <caption>表格标题（描述表格内容）</caption>
+    <thead>
+        <tr>
+            <th>&nbsp;</th>
+            <th>table header 1</th>
+            <th>table header 2</th>
+            <th colspan="2">table header 3</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>table header 1</th>
+            <td>table data 1 1</td>
+            <td>table data 1 2</td>
+            <td>table data 1 3</td>
+            <td>table data 1 4</td>
+        </tr>
+        <tr>
+            <th rowspan="2">table header 2</th>
+            <td>table data 2 1</td>
+            <td>table data 2 2</td>
+            <td>table data 2 3</td>
+            <td>table data 2 4</td>
+        </tr>
+        <tr>
+            <td>table data 3 1</td>
+            <td>table data 3 2</td>
+            <td>table data 3 3</td>
+            <td>table data 3 4</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="2">解释</td>
+            <td colspan="3">相对于上表，此表添加了表结构。</td>
+        </tr>
+    </tfoot>
+</table>
+<br>
+<br>
+<br>
+<br>
+<br>
+<table>
+    <caption>添加scope属性</caption>
+    <thead>
+        <tr>
+            <th scope="col">&nbsp;</th>
+            <th scope="col">table header 1</th>
+            <th scope="col">table header 2</th>
+            <th scope="col" colspan="2">table header 3</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">table header 1</th>
+            <td>table data 1 1</td>
+            <td>table data 1 2</td>
+            <td>table data 1 3</td>
+            <td>table data 1 4</td>
+        </tr>
+        <tr>
+            <th scope="row" rowspan="2">table header 2</th>
+            <td>table data 2 1</td>
+            <td>table data 2 2</td>
+            <td>table data 2 3</td>
+            <td>table data 2 4</td>
+        </tr>
+        <tr>
+            <td>table data 3 1</td>
+            <td>table data 3 2</td>
+            <td>table data 3 3</td>
+            <td>table data 3 4</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="2">解释</td>
+            <td colspan="3">相对于上表，此表添加了scope属性。</td>
+        </tr>
+    </tfoot>
+</table>
+    </body>
+    </html>
+    
