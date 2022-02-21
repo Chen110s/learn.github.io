@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Table template</title>
+        <style>
+            html {
+                font-family: sans-serif;
+                font-size: 1.3em;
+            }
+
+            table {
+                border-collapse: collapse;
+                border: 2px solid rgb(200, 200, 200);
+                letter-spacing: 1px;
+                font-size: 0.8rem;
+            }
+
+            td,
+            th {
+                border: 1px solid rgb(190, 190, 190);
+                padding: 10px 20px;
+            }
+
+            th {
+                background-color: rgb(235, 235, 235);
+            }
+
+            td {
+                text-align: center;
+            }
+
+            tr:nth-child(even) td {
+                background-color: rgb(250, 250, 250);
+            }
+
+            tr:nth-child(odd) td {
+                background-color: rgb(245, 245, 245);
+            }
+
+            caption {
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Table template</h1>
+        <table>
+            <caption>Data about the planets of our solar system (Planetary facts taken from
+                <a href="http://nssdc.gsfc.nasa.gov/planetary/factsheet/">Nasa's Planetary Fact Sheet - Metric</a>).</caption>
+            <colgroup>
+                <col span="2">
+                <col style="border: 3px solid black;">
+                <col span="9">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th colspan="2">&nbsp;</th>
+                    <th id="Name">Name</th>
+                    <th id="Mass">Mass (10<sup>24</sup>kg)</th>
+                    <th id="Diameter">Diameter (km)</th>
+                    <th>Density (kg/m<sup>3</sup>)</th>
+                    <th id="Density">Gravity (m/s<sup>2</sup>)</th>
+                    <th id="Length-of-day">Length of day (hours)</th>
+                    <th id="Distance-from-Sun">Distance from Sun (10<sup>6</sup>km)</th>
+                    <th id="Mean-temperature">Mean temperature (°C)</th>
+                    <th id="Number-of-moons">Number of moons</th>
+                    <th id="Notes">Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th rowspan="4" colspan="2">Terrestrial planets</th>
+                    <th id="Mercury">Mercury</td>
+                    <td headers="Mass Mercury">0.330</td>
+                    <td headers="Diameter Mercury">4,879</td>
+                    <td headers="Density Mercury">5427</td>
+                    <td headers="Gravity Mercury">3.7</td>
+                    <td headers="Length-of-day Mercury">4222.6</td>
+                    <td headers="Distance-from-Sun Mercury">57.9</td>
+                    <td headers="Mean-temperature Mercury">167</td>
+                    <td headers="Number-of-moons Mercury">0</td>
+                    <td headers="Notes Mercury">Closest to the Sun</td>
+                </tr>
+                <tr>
+                    <th id="Venus">Venus</td>
+                    <td headers="Mass Venus">4.87</td>
+                    <td headers="Diameter Venus">12,104</td>
+                    <td headers="Density Venus">5243</td>
+                    <td headers="Gravity Venus">8.9</td>
+                    <td headers="Length-of-day Venus">2802.0</td>
+                    <td headers="Distance-from-Sun Venus">108.2</td>
+                    <td headers="Mean-temperature Venus">464</td>
+                    <td headers="Number-of-moons Venus">0</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th id="Earth">Earth</td>
+                    <td>5.97</td>
+                    <td>12,756</td>
+                    <td>5514</td>
+                    <td>9.8</td>
+                    <td>24.0</td>
+                    <td>149.6</td>
+                    <td>15</td>
+                    <td>1</td>
+                    <td>Our world</td>
+                </tr>
+                <tr>
+                    <th id="">Mars</td>
+                    <td>0.642</td>
+                    <td>6,792</td>
+                    <td>3933</td>
+                    <td>3.7</td>
+                    <td>24.7</td>
+                    <td>227.9</td>
+                    <td>-65</td>
+                    <td>2</td>
+                    <td>The red planet</td>
+                </tr>
+                <tr>
+                    <th rowspan="4">Jovian planets</th>
+                    <th rowspan="2">Ice giants</th>
+                    <th id="">Jupiter</td>
+                    <td>1898</td>
+                    <td>142,984</td>
+                    <td>1326</td>
+                    <td>23.1</td>
+                    <td>9.9</td>
+                    <td>778.6</td>
+                    <td>-110</td>
+                    <td>67</td>
+                    <td>The largest planet</td>
+                </tr>
+                <tr>
+                    <th id="">Saturn</td>
+                    <td>568</td>
+                    <td>120,536</td>
+                    <td>687</td>
+                    <td>9.0</td>
+                    <td>10.7</td>
+                    <td>1433.5</td>
+                    <td>-140</td>
+                    <td>62</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th rowspan="2">Gas giants</th>
+                    <th id="">Uranus</td>
+                    <td>86.8</td>
+                    <td>51,118</td>
+                    <td>1271</td>
+                    <td>8.7</td>
+                    <td>17.2</td>
+                    <td>2872.5</td>
+                    <td>-195</td>
+                    <td>27</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th id="">Neptune</td>
+                    <td>102</td>
+                    <td>49,528</td>
+                    <td>1638</td>
+                    <td>11.0</td>
+                    <td>16.1</td>
+                    <td>4495.1</td>
+                    <td>-200</td>
+                    <td>14</td>
+                    <td></td>
+
+                </tr>
+                <tr>
+                    <th colspan="2">Dwarf planets</th>
+                    <th id="">Pluto</td>
+                    <td>0.0146</td>
+                    <td>2,370</td>
+                    <td>2095</td>
+                    <td>0.7</td>
+                    <td>153.3</td>
+                    <td>5906.4</td>
+                    <td>-225</td>
+                    <td>5</td>
+                    <td>Declassified as a planet in 2006, but this
+                        <a href="https://www.usatoday.com/story/tech/2014/10/02/pluto-planet-solar-system/16578959/" target="_blank">remains controversial.</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
