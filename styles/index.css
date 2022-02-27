@@ -38,3 +38,28 @@ footer{
     font-weight: bolder;
     font-size: xx-large;
 }
+
+/* 没有被访问过的 绿色*/
+a:link{
+    color: green;
+}
+/* 访问过的 黄色*/
+a:visited{
+    color: yellow;
+}
+
+/* 鼠标悬停的 取消修饰，字体改为黑色*/
+a:hover{
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+/* 点击时 字体恢复原来大小 */
+a:active{
+    font-size: 1em;
+}
+
+/* 鼠标点击后，被点击元素保持点击时的状态——只在a标签中生效 */
+a:focus{
+    color: red;
+}

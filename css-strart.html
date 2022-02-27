@@ -6,26 +6,95 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>css起步</title>
         <style>
+
             /* 
-        选择器 {
-            属性:值;
-        }
-        selector {
-            property:value;
-        }
-        
-        */
+            选择器 {
+                属性:值;
+            }
+            selector {
+                property:value;
+            }
+            */
+
+            /* 斜体  */
+            #only {
+                font-style: italic;
+                color: purple;
+            }
             header p {
                 font-size: 3em;
+            }
+            main article h2 {
+                color: rgb(255, 1, 1);
+            }
+            /* 
+            爷 父 孙 
+            */
+            main article p,
+            main article ul li {
+                color: rgb(62, 230, 62);
+            }
+
+            /* 取消 元素li 默认样式 */
+            li {
+                list-style-type: none;
+            }
+
+            .one {
+                color: red;
+                font-size: 1.2em;
+            }
+            body main article ul > li.two {
+                font-size: 1.2em;
+                color: rgb(0, 59, 253);
+            }
+            h1 + small {
+                color: rgb(73, 203, 255);
+            }
+
+            a:link{
+                color: red;
+            }
+            a:visited{
+                color: green;
+            }
+            a:hover{
+                color: yellow;
+            }
+            ul~p{
+                background-color: yellow;
             }
         </style>
     </head>
     <body>
         <header>
-
-            <p>我是&lt;p&gt;</p>
+            <h1>css起步</h1>
+            <small>作者：一只爱吃萝卜的小兔子</small>
         </header>
-        <p>我原本是&lt;p&gt;</p>
+        <main>
+            <article>
+                <h2>I am a level one heading</h2>
+                <p>This is a paragraph of text. In the text is a span element and also a
+                    <a href="http://example.com/" target="_blank">
+                        <strong>link</strong>
+                    </a>.</p>
 
+                <p>This is the second paragraph. It contains an
+                    <strong>emphasized</strong>
+                    element.</p>
+                <ul>
+                    <li>item 1</li>
+                    <li class="one">item 2</li>
+                    <li>item<em>3</em>
+                    </li>
+                    <li class="two">item 4</li>
+                </ul>
+                <p class="two">类选择器和元素选择器一起使用,对该元素中含有指定类的部分指定样式</p>
+                <p id="only">id 选择器</p>
+            </article>
+        </main>
+        <footer>
+            <small>© 一只爱吃萝卜的小兔子</small>
+        </footer>
     </body>
 </html>
