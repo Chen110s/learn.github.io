@@ -36,7 +36,7 @@
             }
 
             /* 取消 元素li 默认样式 */
-            li {
+            main article ul li {
                 list-style-type: none;
             }
 
@@ -52,18 +52,19 @@
                 color: rgb(73, 203, 255);
             }
 
-            a:link{
+            a:link {
                 color: red;
             }
-            a:visited{
+            a:visited {
                 color: green;
             }
-            a:hover{
+            a:hover {
                 color: yellow;
             }
-            ul~p{
+            ul~p {
                 background-color: yellow;
             }
+
         </style>
     </head>
     <body>
@@ -91,6 +92,26 @@
                 </ul>
                 <p class="two">类选择器和元素选择器一起使用,对该元素中含有指定类的部分指定样式</p>
                 <p id="only">id 选择器</p>
+            </article>
+            <article>
+                <h2 style="color: blue; font-size: 2.5em;">好句积累</h2>
+                <ol style="color: red;">
+                    <li>
+                        一切命运的馈赠早已明码标价。
+                    </li>
+                    <li>
+                        世间至理，等价交换。
+                    </li>
+                    <li>
+                        一个教育家，即使是最蹩脚的教育家也绝不会让自己的学生收到半点伤害。
+                    </li>
+                    <li>
+                        作为一教育家，我相信我的学生一定会是个好孩子。
+                    </li>
+                </ol>
+                <p style="color: blue; margin-left: 350px;">
+                    —— 一只爱吃萝卜的小兔子
+                </p>
             </article>
         </main>
         <footer>
