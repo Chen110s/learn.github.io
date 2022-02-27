@@ -16,17 +16,38 @@
             }
             */
 
-            /* 斜体  */
+            /* id选择器实例 */
+            /* --------------------------------------------- */
+            /* 斜体 紫色 */
             #only {
                 font-style: italic;
                 color: purple;
+                width: calc(100% - 100px);
+            }
+
+            /* 类选择器实例 */
+            /* --------------------------------------------- */
+            .one {
+                color: red;
+                font-size: 1.2em;
+            }
+
+            /* 页眉元素样式设置 */
+            /* --------------------------------------------- */
+            header h1{
+                color: white;
             }
             header p {
                 font-size: 3em;
             }
+
+
+            /* 主要内容样式设置 */
+            /* --------------------------------------------- */
             main article h2 {
                 color: rgb(255, 1, 1);
             }
+
             /* 
             爷 父 孙 
             */
@@ -40,29 +61,115 @@
                 list-style-type: none;
             }
 
-            .one {
-                color: red;
-                font-size: 1.2em;
-            }
             body main article ul > li.two {
                 font-size: 1.2em;
                 color: rgb(0, 59, 253);
             }
+
             h1 + small {
                 color: rgb(73, 203, 255);
             }
 
+            /* 超链接状态样式设置 */
+            /* --------------------------------------------- */
             a:link {
                 color: red;
             }
+
             a:visited {
                 color: green;
             }
+
             a:hover {
                 color: yellow;
             }
+
             ul~p {
                 background-color: yellow;
+            }
+
+            body {
+                background: white url('./images/bg1.png') no-repeat fixed;
+                background-size: cover;
+                /* 等价于 */
+                /* background-color: white;
+                background-image: url('./images/bg1.png');
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-attachment:fixed; */
+                /* background-position: */
+                /* background-clip */
+                /* background-color: white; */
+
+
+            }
+
+            /* 小于 max-width最大可见区域宽度 时生效 */
+            /* min-width最小可见区域宽度 */
+            @media(max-width: 500px) {
+                body {
+                    background-color: blanchedalmond;
+                    background-image: url('');
+                }
+            }
+
+            main article ol li {
+
+                /* 
+                    定义字体的风格:
+                    normal	默认值。浏览器显示一个标准的字体样式。
+                    italic	浏览器会显示一个斜体的字体样式。
+                    oblique	浏览器会显示一个倾斜的字体样式。
+                    inherit	规定应该从父元素继承字体样式。
+                 */
+                font-style: italic;
+
+                /*  
+                    设置字体的异体:
+                    normal	默认值。浏览器会显示一个标准的字体。
+                    small-caps	浏览器会显示小型大写字母的字体。
+                    inherit	规定应该从父元素继承 font-variant 属性的值。 
+                */
+                font-variant: small-caps;
+
+                /* 
+                    设置字体粗细：
+                    normal	默认值。定义标准的字符。相当于数字400
+                    bold	定义粗体字符。
+                    bolder	定义更粗的字符。
+                    lighter	定义更细的字符。
+                    100到900定义由细到粗的字符。400 等同于 normal，而 700 等同于 bold。
+                    inherit	规定应该从父元素继承字体的粗细。
+                */
+                font-weight: 900;
+
+                /* 
+                    font-size/line-height
+                    字体尺寸  行高  
+                */
+
+                /* 
+                    设置字体系列：
+                    浏览器不支持第一个字体，则会尝试下一个。
+                    font-family: 字体1,字体2,……;
+
+                */
+                font-family: "Times New Roman", Georgia, Serif;
+                /* line-height */
+
+
+            }
+
+            article:last-child {
+                /* border:5px solid rgb(0, 255, 42); */
+                /* 等价于 */
+                border-width: 5px;
+                border-style: solid;
+                border-color: rgb(0, 255, 42);
+            }
+
+            footer {
+                color: white;
             }
 
         </style>
@@ -108,6 +215,11 @@
                     <li>
                         作为一教育家，我相信我的学生一定会是个好孩子。
                     </li>
+
+                    <li>
+                        You are a good child.
+                    </li>
+
                 </ol>
                 <p style="color: blue; margin-left: 350px;">
                     —— 一只爱吃萝卜的小兔子
