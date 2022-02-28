@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>个人主页</title>
+        <style>
+            /* 网页背景 */
+            /* ---------------------------------------------------- */
+
+            body {
+                padding: 0;
+                margin: 0;
+                /* 背景图片 尺寸铺满页面 图片不重复 图片位置固定，不滚动 */
+                background: url('./images/bg.png') 100% 100% no-repeat fixed;
+
+                /* 页面缩小时， 背景图片上下，左右居中*/
+                background-position-x: center;
+                background-position-y: center;
+            }
+            /* 页眉 */
+            /* ---------------------------------------------------- */
+
+            /* 一级标题 居中 字体阴影（更立体，更明显） 下划线 */
+            header h1 {
+                text-align: center;
+                text-shadow: 3px 3px black;
+                color: hotpink;
+                border-bottom: 2px solid hotpink;
+            }
+
+            /* 内容主体 */
+            /* ----------------------------------------------------- */
+
+            /* 主体二三级标题样式 */
+            main h2,
+            main h3 {
+                color: hotpink;
+                text-shadow: 3px 3px black;
+                margin-left: 10%;
+                margin-bottom: 5px;
+                padding-top: 1%;
+            }
+
+            /* 主体内容样式 */
+            main p {
+                padding: 0;
+                margin-top: 0;
+                margin-left: 10%;
+                color: hotpink;
+                text-shadow: 2px 2px black;
+                font-size: 1.2em;
+                font-weight: 900;
+            }
+
+            
+            /* 页脚 */
+            footer {
+                border-top: 2px solid hotpink;
+                color: hotpink;
+                font-size: 1.2em;
+            }
+
+            div {
+                margin-left: 10%;
+            }
+
+            a:link,
+            a:visited {
+                font-style: oblique;
+            }
+
+            a:hover {
+                text-decoration: none;
+                font-size: 1.2em;
+            }
+
+            a:active {
+                color: yellow;
+            }
+
+            a:focus {
+                color: hotpink;
+            }
+
+            footer p{
+                position: absolute;
+                left: 45%;
+                bottom: 10px;
+                color: black;
+                font-weight: 900;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>一只爱吃萝卜的小兔子的主页</h1>
+        </header>
+
+        <main>
+            <h2>简介</h2>
+            <p>&nbsp;&nbsp;被疫情困在宿舍的在校大学生 ヽ(ー_ー)ノ</p>
+            <h2>爱好</h2>
+            <p>&nbsp;&nbsp;乒乓球</p>
+            <h2>方向</h2>
+            <p>&nbsp;&nbsp;前端</p>
+            <h2>标签</h2>
+            <p>&nbsp;&nbsp;计算机系宅男</p>
+        </main>
+
+        <footer>
+            <div>
+                <h2>联系信息</h2>
+                <ul>
+                    <li>邮件:
+                        <a href="mailto:jane@example.com">jane@example.com</a>
+                    </li>
+                    <li>网页:
+                        <a href="http://example.com">http://example.com</a>
+                    </li>
+                    <li>电话: 123 45678</li>
+                    <li>csdn：
+                        <a href="https://blog.csdn.net/weixin_46372074?spm=1000.2115.3001.5343" target="_blank" rel="noopener noreferrer">一只爱吃萝卜的小兔子的个人</a>
+                    </li>
+                </ul>
+            </div>
+            <p> © 2022年2月28日 </p>
+        </footer>
+    </body>
+</html>
