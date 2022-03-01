@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>层叠实例</title>
+        <style>
+            .font-red {
+                color: red;
+            }
+
+            /* 页眉 */
+            /* -------------------------------------------------- */
+            header h1,
+            header h2 {
+                color: red;
+            }
+
+            header h1,
+            header h2 {
+                color: blue;
+            }
+
+            /* 主体文章 */
+            /* -------------------------------------------------- */
+            main article {
+                color: green;
+            }
+
+            main {
+                color: hotpink;
+            }
+            main article:last-child {
+                /* 颜色与父元素相同，这里指的是main */
+                color: inherit;
+            }
+
+            .fix-this {
+                all: unset;
+            }
+            footer p{
+                border: 2px solid hotpink !important;
+                color: hotpink;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>This is my heading.</h1>
+        </header>
+
+        <main>
+            <h2 class="font-red">优先级：类选择器 > 元素选择器</h2>
+            <article>
+                <h2>我是二级标题</h2>
+                <p>我是一个段落。</p>
+            </article>
+            <article class="font-red">
+                <h2>我也是二级标题</h2>
+                <p>我也是一个段落。</p>
+            </article>
+            <article>
+                <h2>我还是二级标题</h2>
+                <p>我还是一个段落。</p>
+            </article>
+        </main>
+
+        <footer>
+            <p>© 一只爱吃萝卜的小兔子 2022年3月1日</p>
+            <p class="fix-this">© 一只爱吃萝卜的小兔子 2022年3月1日</p>
+        </footer>
+    </body>
+</html>
