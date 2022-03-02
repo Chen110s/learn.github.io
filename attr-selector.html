@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>属性选择器</title>
+        <style>
+            ul li[class] {
+                font-size: 2em;
+            }
+
+            ul li[class="a"] {
+                color: red;
+            }
+
+            ul li[class~="a"] {
+                font-weight: bolder;
+            }
+
+ol li[class^="a"]{
+    font-size: 2em;
+}
+
+ol li[class$="a"]{
+    background-color: yellow;
+}
+
+ol li[class*="a"]{
+    font-weight: bold;
+}
+
+dl dd[class^="a"]{
+    background-color: hotpink;
+}
+
+
+dl dd[class^="a" i]{
+    font-size: 2em;
+}
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li>Item one</li>
+            <li class="a">Item two</li>
+            <li class="a b">Item three</li>
+            <li class="ab">Item four</li>
+        </ul>
+        <hr>
+<ol>
+    <li>Item one</li>
+    <li class="a">Item two</li>
+    <li class="a b">Item three</li>
+    <li class="ab">Item four</li>
+</ol>
+<hr>
+
+<dl>
+    <dd>Item one</dd>
+    <dd class="a">Item two</dd>
+    <dd class="A b">Item three</dd>
+    <dd class="Ab">Item four</dd>
+</dl>
+
+    </body>
+</html>
