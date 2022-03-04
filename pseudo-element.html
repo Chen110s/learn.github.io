@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>伪元素实例</title>
+        <style>
+
+            /* 伪元素选择器 */
+            article p::first-line {
+                font-size: 1.2em;
+                font-weight: bold;
+            }
+
+            /* 动态伪类选择器 */
+            article a:link,
+            article a:visited {
+                color: blue;
+            }
+
+            article h2::before {
+                content: "→"
+            }
+            article h2::after {
+                content: "←"
+            }
+
+            small::before {
+                content: "";
+                display: block;
+                width: 100px;
+                height: 100px;
+                background-color: rebeccapurple;
+                border: 1px solid black;
+            }
+
+            /* 伪类和伪元素结合 */
+            article p:last-child::before{
+                content: "";
+                display: block;
+                width: 100px;
+                height: 100px;
+                background-color: rebeccapurple;
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <article>
+            <h2>龙族语录</h2>
+            <p>逆我们的，就让他们死去，这就是我们的法则。</p>
+
+            <p>这个世界很温柔，但它不喜欢我。</p>
+
+            <p>
+                <a href="https://mip.ruiwen.com/yulu/1471798.html?ivk_sa=1024320u" alt="" title="这些句子的原网站">独地死去，一点儿也不觉得难过么？</a>
+            </p>
+
+            <p>
+                <a href="https://mip.ruiwen.com/yulu/1471798.html?ivk_sa=1024320u" alt="" title="这些句子的原网站">善必胜恶，如光所到的地方，黑暗无处遁形。</a>
+            </p>
+
+            <p>
+                <a href="https://mip.ruiwen.com/yulu/1471798.html?ivk_sa=1024320u" alt="" title="这些句子的原网站" target="_blank">可是这就是自己的人生啊，就那么点理由。就像是个园丁，很没本事，只种出了一朵花来，还是种在火星上别人家的花圃里的，但是，你还是会守着望远镜去看那朵花的是不是？因为除了它你一无所有啊，所以对你就很珍贵，就算你和它的距离是火星到地球。</a>
+            </p>
+
+            <p>现在的怨恨那么深，只因为当初的相遇那么美。</p>
+
+            <p>如果你看见一面墙，往上往下往左往右都看不到尽头，永远抵达不了边界。那就是死亡。</p>
+
+            <p>如果全世界都把你看作敌人，你是不是也曾想过要毁掉这个世界？</p>
+
+            <p>你觉得你为正义支付了代价，你觉得痛苦，因为你所遵从的正义并不是你自己心里真正想要的东西。你遵从的是别人教给你的"大义"，而不是你自己的心。</p>
+
+            <p>世界上有一种生命，它的每一次死亡，都是为了归来！</p>
+
+        </article>
+
+        <small>2022年3月4日</small>
+    </body>
+</html>
