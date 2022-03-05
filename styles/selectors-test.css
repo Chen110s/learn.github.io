@@ -1,0 +1,142 @@
+/* container1
+-------------------------------------------------- */
+
+
+/* 一级标题 */
+
+.container1 h1 {
+    color: blue;
+}
+
+
+/* 二级标题 */
+
+.container1 h2 {
+    background-color: blue;
+    color: white;
+}
+
+
+/* p内span包含的文本
+*/
+
+.container1 p>span {
+    font-size: 2em;
+}
+
+
+/* container2
+-------------------------------------------------- */
+
+.container2 #special {
+    background-color: yellow;
+}
+
+.container2 .alert {
+    border: 1px solid gray;
+}
+
+.container2 .stop {
+    background-color: red;
+}
+
+.container2 .go {
+    background-color: green;
+}
+
+
+/* container3
+-------------------------------------------------- */
+
+.container3 a:link {
+    color: orange;
+}
+
+.container3 a:visited {
+    color: green;
+}
+
+.container3 a:hover {
+    text-decoration: none;
+}
+
+.container3::first-line {
+    color: red;
+}
+
+.container3::first-letter {
+    font-size: 1.5em;
+}
+
+
+/* 表格条带化 
+------------- */
+
+.container3 table {
+    border-collapse: collapse;
+}
+
+.container3 table tr:nth-child(2n) {
+    color: white;
+    background: #333;
+}
+
+
+/* container4 
+-------------------------------------------------- */
+
+.container4 h2~p {
+    color: red;
+}
+
+.container4 .list>li {
+    list-style: none;
+}
+
+.container4>ul>li {
+    border-bottom: 1px solid gray;
+}
+
+
+/* .container5 
+-------------------------------------------------- */
+
+
+/* 去除默认样式 */
+
+.container5 ul li {
+    list-style: none;
+}
+
+
+/* 加上边框 */
+
+.container5 a {
+    display: block;
+    margin-top: 20px;
+    border: 5px solid grey;
+    padding: 10px 20% 10px 10px;
+}
+
+
+/* {
+    border-width: 5px;
+    border-style: solid;
+    margin: 8px;
+    padding: 5px;
+} */
+
+.container5 ul li>a:first-child {
+    border-color: green;
+}
+
+
+/* 将含title属性的a标签的边框改成粉色 */
+
+.container5 ul li>a[title] {
+    border-color: pink;
+}
+
+.container5 ul li>a[href*="contact"] {
+    border-color: orange;
+}

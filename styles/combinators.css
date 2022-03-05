@@ -1,0 +1,33 @@
+/* 标题——后代选择器 
+--------------------------------------------------*/
+
+body h1 {
+    text-align: center;
+    color: #00FFFF;
+    text-shadow: 3px 3px 1px black;
+}
+
+
+/* 文章标题 —— 子代选择器 
+--------------------------------------------------*/
+
+article>h2 {
+    font-style: italic;
+    border-bottom: 1px solid black;
+}
+
+
+/* 有序列表——邻接兄弟
+--------------------------------------------------  */
+
+p+ol {
+    color: hotpink;
+}
+
+
+/* div之后的section字体变大变粗 —— 通用兄弟选择器 */
+
+div~section {
+    font-size: 1.2em;
+    font-weight: bold;
+}
