@@ -1,87 +1,92 @@
 <!DOCTYPE html>
 <html lang="zh-Hans">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>类型、类和ID选择器</title>
-        <style>
-            /* 元素选择器 */
-span {
-    background-color: yellow;
-}
 
-strong {
-    color: blue;
-}
-
-em {
-    color: green;
-}
-
-/* 全局选择器 */
-/* *{
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>类型、类和ID选择器</title>
+    <style>
+        /* 元素选择器 */
+        
+        span {
+            background-color: yellow;
+        }
+        
+        strong {
+            color: blue;
+        }
+        
+        em {
+            color: green;
+        }
+        /* 全局选择器 */
+        /* *{
     border:3px solid black;
 } */
-article *:first-child{
-    color: hotpink;
-}
+        
+        article *:first-child {
+            color: hotpink;
+        }
+        /* 类选择器 */
+        
+        .italic {
+            /* 斜体 */
+            font-style: italic;
+        }
+        
+        .italic.red {
+            /* 斜体 */
+            font-style: italic;
+            color: red;
+        }
+        /* 指向特定元素的类 */
+        
+        h3.highlight {
+            background-color: hotpink;
+        }
+        
+        p.highlight {
+            background-color: pink;
+        }
+        /* id选择器 */
+        
+        #one {
+            background-color: green;
+        }
+        
+        p#two {
+            background-color: red;
+        }
+    </style>
+</head>
 
-/* 类选择器 */
-.italic{
-    /* 斜体 */
-    font-style: italic;
-}
-.italic.red{
-    /* 斜体 */
-    font-style: italic;
-    color: red;
-}
+<body>
+    <h1>类型（元素）选择器</h1>
+    <p>又名“<strong>标签名选择器</strong>”</p>
+    <p>或者是“<span>元素选择器</span>”，</p>
+    <p>因为它在文档中选择的对象是一个<em>HTML标签/元素</em>。</p>
+    <hr>
 
-/* 指向特定元素的类 */
-h3.highlight{
-    background-color: hotpink;
-}
+    <article>
+        <h2>我是第一篇文章的标题</h2>
+        <p>我是第一篇文章的段落内容。</p>
+    </article>
+    <article>
+        <h2>我是第二篇文章的标题</h2>
+        <p>我是第二篇文章的段落内容。</p>
+    </article>
+    <hr>
+    <h2 class="italic">我是类选择器实例</h2>
+    <h2 class="italic red">我是类选择器实例</h2>
+    <h3 class="highlight">指向特定元素的类</h3>
+    <p class="highlight">指向特定元素的类</p>
+    <hr>
 
-p.highlight{
-    background-color: pink;
-}
+    <h2 id="one">我是id选择器实例一</h2>
+    <p id="two">我是id选择器实例二</p>
+    <hr>
 
-/* id选择器 */
-#one{
-    background-color: green;
-}
+</body>
 
-p#two{
-    background-color: red;
-}
-        </style>
-    </head>
-    <body>
-        <h1>类型（元素）选择器</h1>
-        <p>又名“<strong>标签名选择器</strong>”</p>
-        <p>或者是“<span>元素选择器</span>”，</p>
-        <p>因为它在文档中选择的对象是一个<em>HTML标签/元素</em>。</p>
-<hr>
-
-        <article>
-            <h2>我是第一篇文章的标题</h2>
-            <p>我是第一篇文章的段落内容。</p>
-        </article>
-        <article>
-            <h2>我是第二篇文章的标题</h2>
-            <p>我是第二篇文章的段落内容。</p>
-        </article>
-        <hr>
-<h2 class="italic">我是类选择器实例</h2>
-<h2 class="italic red">我是类选择器实例</h2>
-<h3 class="highlight">指向特定元素的类</h3>
-<p class="highlight">指向特定元素的类</p>
-        <hr>
-
-<h2 id="one">我是id选择器实例一</h2>
-<p id="two">我是id选择器实例二</p>
-<hr>
-
-    </body>
 </html>
