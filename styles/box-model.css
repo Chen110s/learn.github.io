@@ -1,0 +1,72 @@
+/* container
+-------------------------------------------------- */
+
+.container h2,
+.container p,
+.container ul {
+    border: 2px solid black;
+    padding: 0.5em;
+}
+
+.container ul li,
+.container .block {
+    border: 2px solid blue;
+    padding: .5em;
+    margin-right: .5em;
+}
+
+
+/* 将ul元素定义为弹性盒子，内部子元素会排成一列 */
+
+.container ul {
+    display: flex;
+    list-style: none;
+}
+
+.container p .block {
+    display: block;
+}
+
+
+/* .container2
+-------------------------------------------------- */
+
+
+/* 给每个元素一个边框 */
+
+.container2 h2,
+.container2 p,
+.container2 ul {
+    border: 2px solid blue;
+    padding: .5em;
+}
+
+.container2 ul {
+    margin-top: .2em;
+    margin-bottom: .2em;
+}
+
+.container2 span {
+    border: 2px solid blue;
+}
+
+.container2 ul li {
+    list-style: none;
+    border: 2px solid black;
+    padding: .5em;
+    margin-right: .5em;
+}
+
+
+/* 将ul设置为弹性盒子，且内部子元素排列在一行 */
+
+.container2 ul {
+    display: inline-flex;
+}
+
+
+/* 变为内联元素 */
+
+.container2 .inline {
+    display: inline;
+}
