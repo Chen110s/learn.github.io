@@ -1,0 +1,39 @@
+.box {
+    inline-size: 200px;
+    writing-mode: horizontal-tb;
+}
+
+
+/* 边框和外边距（块级）是block，padding（文本内容）是inline，方位只用开头 start， 结束 end */
+
+.logical {
+    /*上外边距 */
+    margin-block-start: 20px;
+    /* 右内边距 */
+    padding-inline-end: 2em;
+    /* 上内边距 */
+    padding-block-start: 2px;
+    /* 上边框 */
+    border-block-start: 5px solid pink;
+    /* 右边框 */
+    border-inline-end: 10px dotted rebeccapurple;
+    /*底部边框  无论在那种书写模式下都位于文本的下方*/
+    border-block-end: 1em double orange;
+    /* 左边框 */
+    border-inline-start: 1px solid black;
+}
+
+.physical {
+    /*  */
+    margin-top: 20px;
+    padding-right: 2em;
+    padding-top: 2px;
+    border-top: 5px solid pink;
+    border-right: 10px dotted rebeccapurple;
+    border-bottom: 1em double orange;
+    border-left: 1px solid black;
+}
+
+h2 {
+    border-bottom: 5px solid black;
+}
