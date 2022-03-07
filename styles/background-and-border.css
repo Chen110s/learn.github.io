@@ -1,0 +1,43 @@
+/* Background Colors  范围：内容和内边距
+-------------------------------------------------- */
+
+.box {
+    background-color: #567895;
+    border: 3px solid black;
+    padding: 10px;
+}
+
+.box h2 {
+    color: white;
+    background-color: black;
+}
+
+.box span {
+    color: yellow;
+    background-color: black;
+}
+
+
+/* background-image
+-------------------------------------------------- */
+
+body {
+    background-image: url('../images/little-bg.png');
+}
+
+
+/* border  .box2
+-------------------------------------------------- */
+
+
+/* 混合边框 */
+
+.box2 {
+    color: red;
+    padding: .5em;
+    border-style: dashed dotted double groove;
+    border-color: red;
+    border-width: .5em;
+    border-radius: 10% 30%;
+    background-color: black;
+}
