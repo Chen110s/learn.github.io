@@ -1,0 +1,8 @@
+.box {
+    border: 2px solid black;
+    width: 200px;
+    height: 100px;
+    overflow: auto;
+    /* 此时的auto等价于 
+       overflow: hidden scroll; */
+}
