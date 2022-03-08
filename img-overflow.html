@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>images overflow</title>
+    <link rel="stylesheet" href="./styles/img-overflow.css">
+</head>
+
+<body>
+    <div class="container1">
+        <h2>图片溢出</h2>
+        <h3>max-width:100%;</h3>
+        <div class="box">
+            <img src="./images/big-bg.jpg" class="max" alt="庄周——高山流水">
+        </div>
+
+        <h2>object-fit</h2>
+        <h3>fill 拉伸填充</h3>
+        <div class="box">
+            <img src="./images/big-bg.jpg" class="fill" alt="庄周——高山流水">
+        </div>
+
+        <h3>cover 保持比例填充</h3>
+        <div class="box">
+            <img src="./images/big-bg.jpg" class="cover" alt="庄周——高山流水">
+        </div>
+
+        <h3>contain 保持比列，缩放</h3>
+        <div class="box">
+            <img src="./images/big-bg.jpg" class="contain" alt="庄周——高山流水">
+        </div>
+
+        <h3>none 尺寸不变</h3>
+        <div class="box">
+            <img src="./images/big-bg.jpg" class="none" alt="庄周——高山流水">
+        </div>
+
+        <h3>scale-down</h3>
+        <div class="box">
+            <img src="./images/big-bg.jpg" class="scale-down" alt="庄周——高山流水">
+        </div>
+    </div>
+</body>
+
+
+
+</html>
