@@ -1,0 +1,34 @@
+.container1 .box {
+    width: 200px;
+    height: 200px;
+    border: 2px solid rebeccapurple;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.max {
+    max-width: 100%;
+}
+
+.fill {
+    object-fit: fill;
+}
+
+.cover {
+    object-fit: cover;
+}
+
+.contain {
+    object-fit: contain;
+}
+
+.none {
+    object-fit: none;
+}
+
+.scale-down {
+    object-fit: scale-down;
+}
