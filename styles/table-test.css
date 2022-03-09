@@ -1,0 +1,105 @@
+/* 表格布局 */
+
+table {
+    /* 布局方式 */
+    table-layout: fixed;
+    /* 去掉表格间隙 */
+    border-collapse: collapse;
+    /* 表宽：响应式 */
+    width: 100%;
+    /* 表格外边框 */
+    border: 3px solid black;
+}
+
+
+/* 表头样式 
+table-layout:fixed；布局
+表格内容与表头是同等宽度的
+*/
+
+thead>th:nth-child(1) {
+    width: 10%;
+}
+
+thead>th:nth-child(2) {
+    width: 10%;
+}
+
+thead>th:nth-child(3) {
+    width: 10%;
+}
+
+thead>th:nth-child(4) {
+    width: 10%;
+}
+
+thead>th:nth-child(5) {
+    width: 20%;
+}
+
+thead>th:nth-child(6) {
+    width: 10%;
+}
+
+thead>th:nth-child(7) {
+    width: 10%;
+}
+
+thead>th:nth-child(8) {
+    width: 10%;
+}
+
+thead>th:nth-child(9) {
+    width: 10%;
+}
+
+
+/* 表格内容 
+居中 边框 字间距*/
+
+th,
+td {
+    text-align: center;
+    padding: .2em;
+    border: 1px solid black;
+    word-break: break-all;
+}
+
+th {
+    letter-spacing: 2px;
+}
+
+td {
+    letter-spacing: 1px;
+}
+
+
+/* 图片和背景 */
+
+
+/* 斑马条纹
+ */
+
+thead tr {
+    color: white;
+    background-color: black;
+}
+
+tbody tr:nth-child(2n) {
+    background-color: yellow;
+}
+
+tbody tr:nth-child(2n+1) {
+    background-color: greenyellow;
+}
+
+
+/* 标题 */
+
+table caption {
+    caption-side: top;
+    font-size: 1.2em;
+    text-align: center;
+    text-shadow: 1px 1px 1px black;
+    margin: 5px;
+}
