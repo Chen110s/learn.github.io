@@ -11,6 +11,7 @@ html {
 }
 
 body {
+    padding-left: 2rem;
     font-size: 2.2rem;
     font-family: '楷体', Cochin, Georgia, Times, 'Times New Roman', serif;
     background-color: aqua;
@@ -31,6 +32,10 @@ small {
 
 p {
     text-decoration: underline black;
+}
+
+p::first-letter {
+    font-weight: bold;
 }
 
 .only {
