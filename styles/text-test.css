@@ -1,0 +1,41 @@
+/* || 通用样式 
+文本布局
+字体样式
+*/
+
+html {
+    font-size: 10px;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    background-color: gray;
+}
+
+body {
+    font-size: 2.2rem;
+    font-family: '楷体', Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: aqua;
+    border: 3px solid black;
+}
+
+
+/* || 特定定样式 */
+
+h1 {
+    color: red;
+    text-shadow: 1px 1px 1px black, 3px 3px 1px black;
+}
+
+small {
+    font-style: italic;
+}
+
+p {
+    text-decoration: underline black;
+}
+
+.only {
+    text-decoration: none;
+    text-align: right;
+    margin-right: 1.5rem;
+    font-style: italic;
+}
