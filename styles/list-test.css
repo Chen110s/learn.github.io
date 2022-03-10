@@ -1,0 +1,76 @@
+html {
+    /* 设置字体 */
+    font-family: '宋体', '隶书';
+    font-size: 10px;
+    background-color: gray;
+}
+
+body {
+    margin: 0 auto;
+    width: 93vw;
+    height: 100vh;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border: 2px solid black;
+    background-color: greenyellow;
+}
+
+h1 {
+    margin-top: 0;
+    padding-top: 1rem;
+    font-size: 3rem;
+    color: blue;
+    text-shadow: 1px 1px 1px black, 2px 2px 1px black;
+}
+
+h2 {
+    font-size: 2.2rem;
+    text-decoration: underline;
+}
+
+ul,
+ol,
+dl,
+p {
+    /* 字体大小 */
+    font-size: 1.5rem;
+}
+
+ol,
+ul {
+    padding-left: 2rem;
+}
+
+li,
+dd {
+    /* 行高 */
+    line-height: 1.5;
+    margin-left: 2rem;
+}
+
+
+/* dt {
+    粗体
+    font-weight: bold;
+} */
+
+
+/* 有序列表 */
+
+ol {
+    list-style-position: outside;
+}
+
+
+/* 无序列表 */
+
+ul {
+    list-style-image: url('../images/little2.svg');
+}
+
+.only {
+    text-decoration: none;
+    text-align: right;
+    margin-right: 1.5rem;
+    font-style: italic;
+}
