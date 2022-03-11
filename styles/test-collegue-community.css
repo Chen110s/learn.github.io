@@ -1,0 +1,182 @@
+/* General setup 
+--------------------------------------------------*/
+
+
+/* 引入字体 */
+
+@font-face {
+    font-family: LubalinGraphStd-Bold;
+    src: url("../fonts/LubalinGraphStd-Bold.OTF");
+}
+
+@font-face {
+    font-family: '方正字汇-佃杰文黑';
+    src: url("../fonts/FZZH-TJWHJW.TTF");
+}
+
+@font-face {
+    font-family: '方正兰亭圆简体_准';
+    src: url("../fonts/FZLanTYJ_Zhun.OTF");
+}
+
+@font-face {
+    font-family: '方正字迹-周崇谦小篆简体';
+    src: url("../fonts/FZZJ-ZCQXZJW.TTF");
+}
+
+
+/* 使用字体 */
+
+html {
+    font-family: 'LubalinGraphStd-Bold', serif;
+    font-size: 10px;
+}
+
+
+/* 字体尺寸，行高 */
+
+p,
+ol,
+ul {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    font-family: '方正兰亭圆简体_准', '方正字汇-佃杰文黑', '方正字汇-佃杰文黑';
+}
+
+h1 {
+    font-size: 3rem;
+    letter-spacing: 2px;
+}
+
+h2 {
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+
+
+/* 一级标题 */
+
+h1 {
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    min-width: 1000px;
+    max-width: 1400px;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+}
+
+section h2+p {
+    padding-left: 2rem;
+}
+
+
+/* Layout */
+
+section {
+    float: left;
+    width: 50%;
+}
+
+aside {
+    float: left;
+    width: 30%;
+}
+
+nav {
+    float: left;
+    width: 20%;
+}
+
+footer {
+    clear: both;
+}
+
+header,
+section,
+aside,
+nav,
+footer {
+    padding: 20px;
+}
+
+
+/* header and footer */
+
+header,
+footer {
+    border-top: 5px solid #a66;
+    border-bottom: 5px solid #a66;
+}
+
+
+/* WRITE YOUR CODE BELOW HERE */
+
+
+/* 链接 */
+
+a:link {
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 2px solid blue;
+}
+
+a:visited {
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 2px solid purple;
+}
+
+a:focus {
+    color: orange;
+    outline-color: orange;
+    border-bottom: none;
+}
+
+a:hover {
+    font-size: 2.2rem;
+    border-bottom: none;
+}
+
+a:active {
+    color: red;
+    border-bottom: 2px solid red;
+}
+
+a[href*="http"] {
+    /* 图片 */
+    background-image: url('../images/external-link-52.png');
+    /* 不重复 */
+    background-repeat: no-repeat;
+    /* 图片大小：最好和文字大小一样 */
+    background-size: 1.6rem 1.6rem;
+    /* 位置：链接末尾 */
+    background-position: 100% 0;
+    /* 将链接后方字体推出一个图标的大小 */
+    padding-right: 1.6rem;
+}
+
+
+/* 导航拦菜单
+-------------------------------------------------- */
+
+nav ul li {
+    display: block;
+    width: 100%;
+    padding: 24% 24%;
+    text-align: center;
+    background-color: #00ffff;
+    margin: 1% 1%;
+    color: blue;
+    border: 2px solid blue;
+}
+
+nav ul li a {
+    border-bottom: none;
+}
