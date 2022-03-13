@@ -1,0 +1,120 @@
+/* 弹性盒子 Flexbox
+-------------------------------------------------- */
+
+.wrapper {
+    display: flex;
+}
+
+.wrapper>div {
+    background-color: aquamarine;
+    flex: 1;
+}
+
+
+/* Grid布局
+-------------------------------------------------- */
+
+.wrapper2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+/* float 布局
+-------------------------------------------------- */
+
+.wrapper3 .box {
+    float: right;
+    width: 100px;
+    height: 100px;
+    background-color: hotpink;
+}
+
+
+/* position  定位布局
+-------------------------------------------------- */
+
+.wrapper4 {
+    width: 500px;
+    margin: 0 auto;
+}
+
+.wrapper4 p {
+    background-color: rgb(207, 232, 220);
+    border: 2px solid rgb(79, 185, 227);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+
+/* 相对定位 */
+
+
+/* .positioned {
+    position: relative;
+    top: 30px;
+    left: 30px;
+} */
+
+
+/* 绝对定位 */
+
+
+/* 
+.wrapper4 .positioned {
+    position: absolute;
+    background-color: blue;
+    top: 30px;
+    left: 30px;
+} */
+
+
+/* 黏性定位 */
+
+.wrapper4 .positioned {
+    position: sticky;
+    background-color: blue;
+    top: 30px;
+    left: 30px;
+}
+
+
+/* 表格布局 */
+
+.wrapper5 form {
+    display: table;
+    margin: 0 auto;
+}
+
+.wrapper5 form div {
+    display: table-row;
+}
+
+.wrapper5 form label,
+form input {
+    display: table-cell;
+    margin-bottom: 10px;
+}
+
+.wrapper5 form label {
+    width: 200px;
+    padding-right: 5%;
+    text-align: right;
+}
+
+.wrapper5 form input {
+    width: 300px;
+}
+
+.wrapper5 form p {
+    display: table-caption;
+    caption-side: bottom;
+    width: 300px;
+    color: #999;
+    font-style: italic;
+}
+
+.container {
+    column-width: 200px;
+}

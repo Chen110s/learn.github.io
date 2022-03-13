@@ -1,0 +1,69 @@
+/* General Styles 
+--------------------------------------------------*/
+
+html {
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    height: 100px;
+    background-color: purple;
+}
+
+h1 {
+    line-height: 100px;
+    text-align: center;
+    color: white;
+    margin: 0;
+    text-shadow: 1px 1px 1px black, 3px 3px 1px black;
+}
+
+article {
+    margin: 10px;
+    padding: 10px;
+    background-color: aqua;
+}
+
+
+/* Special Layout Styles
+-------------------------------------------------- */
+
+section {
+    /* 弹性布局 -- 每个 */
+    display: flex;
+    /* row:所有flex item 都排成一行 */
+    /* wrap:当页面缩小时, 允许越界换行*/
+    flex-flow: row wrap;
+}
+
+article {
+    flex: 1 200px;
+}
+
+article:nth-of-type(3) {
+    flex: 3 200px;
+}
+
+article:nth-of-type(3) div:first-of-type {
+    /*  */
+    flex: 1 100px;
+    display: flex;
+    /* 纵向位置:居中 */
+    align-items: center;
+    flex-flow: row wrap;
+    /* 横向位置: */
+    justify-content: space-around;
+}
+
+button {
+    /* 占一份,flex是flex-grow 放大吗, flex-shrink缩小吗 ,flex-basis 固定宽度*/
+    /* 0:不放大缩小;1,放大缩小且均分 */
+    flex: 1 auto;
+    font-size: 18px;
+    margin: 5px;
+    line-height: 1.5;
+}
