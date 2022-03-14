@@ -1,0 +1,52 @@
+@font-face {
+    font-family: '方正圆体';
+    src: url('../fonts/FZZH-TJWHJW.TTF');
+}
+
+html {
+    font-family: '方正圆体';
+}
+
+body {
+    width: 500px;
+    height: 1400px;
+    margin: 0 auto;
+}
+
+p {
+    background: aqua;
+    border: 3px solid blue;
+    padding: 10px;
+    line-height: 1.5;
+    margin: 10px;
+}
+
+span {
+    background: red;
+    border: 1px solid black;
+}
+
+
+/* 固定定位
+将h1放到浏览器窗口的顶部的中心 */
+
+h1 {
+    position: fixed;
+    top: 0;
+    width: 500px;
+    margin: 0 auto;
+    background: white;
+    padding: 10px;
+}
+
+p:nth-of-type(1) {
+    margin-top: 60px;
+}
+
+
+/* 黏性布局 sticky */
+
+.sticky {
+    position: sticky;
+    top: 0;
+}
