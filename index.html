@@ -1,46 +1,46 @@
 <!DOCTYPE html>
-<html lang="zh-cmn-Hans">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>前端学习主页</title>
-    <link rel="stylesheet" href="./styles/index.css">
+    <title>Two Columns Layout</title>
+    <link rel="stylesheet" href="./styles/float-layout3.css">
 </head>
 
 <body>
-    <header>
-        <h1>学习目标</h1>
-    </header>
-    <article>
-        <ol>
-            <li>
-                <h2>前端了解</h2>
-            </li>
-            <ul type="square">
-                <li>
-                    <a href="./htmlBasic.html" target="_blank" rel="noopener noreferrer">HTML基础</a>
-                </li>
-                <li>
-                    <a href="./HTMLExplain.html" target="_blank" rel="noopener noreferrer">html网页内容解释</a>
-                </li>
-                <li>
-                    <a href="https://baijiahao.baidu.com/s?id=1699512661005789184&wfr=spider&for=pc" target="_blank" rel="noopener noreferrer">html网页内容解释（转载）仅供参考</a>
-                </li>
-                <li>
-                    <a href="./firefox.html" target="_blank" rel="noopener noreferrer">快动动小手，做一个这样的小作品吧</a>
-                </li>
-            </ul>
-            <li>
-                <h2>CSS</h2>
-            </li>
-            <ul type="disc">
-                <li>
-                    <a href="./cssBasic.html" target="_blank">用CSS修改基础作品</a>
-                </li>
-            </ul>
-            <li>
+    <h1>Float disaster</h1>
+
+    <div class="column">
+        <h2>First column</h2>
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit
+            amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac
+            imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+    </div>
+
+    <div class="column">
+        <h2>Second column</h2>
+        <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor,
+            sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes,
+            nascetur ridiculus mus.</p>
+    </div>
+
+    <div class="column">
+        <h2>Third column</h2>
+
+        <p>Nam consequat scelerisque mattis. Duis pulvinar dapibus magna, eget congue purus mollis sit amet. Sed euismod lacus sit amet ex tempus, a semper felis ultrices. Maecenas a efficitur metus. Nullam tempus pharetra pharetra. Morbi in leo mauris.
+            Nullam gravida ligula eros, lacinia sagittis lorem fermentum ut. Praesent dapibus eros vel mi pretium, nec convallis nibh blandit. Sed scelerisque justo ac ligula mollis laoreet. In mattis, risus et porta scelerisque, augue neque hendrerit
+            orci, sit amet imperdiet risus neque vitae lectus. In tempus lectus a quam posuere vestibulum. Duis quis finibus mi. Nullam commodo mi in enim maximus fermentum. Mauris finibus at lorem vel sollicitudin.</p>
+    </div>
+
+    <div class="clearfix"></div>
+    <footer>
+        <p>&copy;2016 your imagination. This isn't really copyright, this is a mockery of the very concept. Use as you wish.</p>
+    </footer>
+</body>
+
+</html>     <li>
                 <h2>JavaScript</h2>
             </li>
             <ul>
@@ -120,6 +120,9 @@
                 <li> <a href="./flexbox-wrap.html" target="_blank" rel="noopener noreferrer">弹性盒子 -- flex-wrap</a></li>
                 <li> <a href="./flex-align.html" target="_blank" rel="noopener noreferrer">弹性布局</a></li>
                 <li> <a href="./grid-column-row.html" target="_blank" rel="noopener noreferrer">网格布局</a></li>
+                <li> <a href="./float-layout.html" target="_blank" rel="noopener noreferrer">引入浮动</a></li>
+                <li> <a href="./float-layout2.html" target="_blank" rel="noopener noreferrer">浮动之两列布局</a></li>
+                <li> <a href="./float-layout3.html" target="_blank" rel="noopener noreferrer">清除浮动之三列布局</a></li>
             </ul>
         </ol>
     </article>
