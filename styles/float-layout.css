@@ -1,0 +1,34 @@
+/* General Styles */
+
+body {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+p {
+    line-height: 2;
+    word-spacing: 0.1rem;
+}
+
+
+/* 浮动图片
+图片向左浮动,此时文本会包围过来,然后用图片外边距向右推开文本,留出间隙 */
+
+img {
+    float: left;
+    margin-right: 30px;
+}
+
+
+/* 首字母下沉 */
+
+p::first-letter {
+    text-transform: uppercase;
+    float: left;
+    font-size: 3rem;
+    background-color: red;
+    padding: 2px;
+    margin-right: 4px;
+    border: 1px solid black;
+}
