@@ -1,0 +1,39 @@
+body {
+    width: 90%;
+    max-width: 900px;
+    margin: 2em auto
+}
+
+
+/* 父容器,包裹住要布局的内容 */
+
+
+/* 指定列数 */
+
+.container {
+    column-count: 3;
+}
+
+
+/* 设置最少列宽 */
+
+.container {
+    column-width: 200px;
+}
+
+
+/* 列间的间隙宽度 */
+
+.container {
+    column-gap: 20px;
+}
+
+
+/* 列的分割线
+这条分割线本身并不占用宽度。它置于用 column-gap 创建的间隙内。
+如果需要更多空间，你需要增加 column-gap 的值。 
+*/
+
+.container {
+    column-rule: 3px dotted aqua;
+}
