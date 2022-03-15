@@ -1,80 +1,94 @@
 <!DOCTYPE html>
 <html lang="zh-Hans">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Image in HTML</title>
-        <style>
-            figure {
-                border: thin #c0c0c0 solid;
-                display: flex;
-                flex-flow: column;
-                padding: 5px;
-                max-width: 220px;
-                margin: auto;
-            }
 
-            img {
-                max-width: 220px;
-                max-height: 150px;
-            }
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image in HTML</title>
+    <style>
+        h1 {
+            text-align: center;
+            font-size: xxx-large;
+            text-shadow: 3px 3px 1px blue;
+        }
+        
+        h2 {
+            font-size: xx-large;
+            text-shadow: 3px 3px 1px blue;
+        }
+        
+        figure {
+            border: thin #c0c0c0 solid;
+            display: flex;
+            flex-flow: column;
+            padding: 5px;
+            max-width: 220px;
+            margin: auto;
+        }
+        
+        img {
+            max-width: 220px;
+            max-height: 150px;
+        }
+        
+        figcaption {
+            background-color: #222;
+            color: #fff;
+            font: italic smaller sans-serif;
+            padding: 3px;
+            text-align: center;
+        }
+    </style>
+</head>
 
-            figcaption {
-                background-color: #222;
-                color: #fff;
-                font: italic smaller sans-serif;
-                padding: 3px;
-                text-align: center;
-            }
-        </style>
-    </head>
-    <body>
-        <h1>Image in HTML</h1>
+<body>
+    <h1>Image</h1>
+    <h2>Image in HTML</h2>
+
+    <img src="./images/text-bg.jpg" alt="冰雪覆盖的山崖的夜色" title="雷神的约顿海姆风景图">
+
+    <div class="figure">
         <img src="./images/text-bg.jpg" alt="冰雪覆盖的山崖的夜色" title="雷神的约顿海姆风景图">
+        <p>雷神电影的约顿海姆的山崖</p>
+    </div>
 
-        <div class="figure">
-            <img src="./images/text-bg.jpg" alt="冰雪覆盖的山崖的夜色" title="雷神的约顿海姆风景图">
-            <p>雷神电影的约顿海姆的山崖</p>
-        </div>
+    <figure>
+        <figcaption>雷神电影的约顿海姆的山崖</figcaption>
+        <img src="./images/text-bg.jpg" width="400px" height="210px" alt="冰雪覆盖的山崖的夜色" title="雷神的约顿海姆风景图">
+    </figure>
+    <figure>
+        <img src="./images/text-bg.jpg" width="400px" height="210px" alt="冰雪覆盖的山崖的夜色" title="雷神的约顿海姆风景图">
+        <figcaption>雷神电影的约顿海姆的山崖</figcaption>
+    </figure>
 
-        <figure>
-            <figcaption>雷神电影的约顿海姆的山崖</figcaption>
-            <img src="./images/text-bg.jpg" width="400px" height="210px" alt="冰雪覆盖的山崖的夜色" title="雷神的约顿海姆风景图">
-        </figure>
-        <figure>
-            <img src="./images/text-bg.jpg" width="400px" height="210px" alt="冰雪覆盖的山崖的夜色" title="雷神的约顿海姆风景图">
-            <figcaption>雷神电影的约顿海姆的山崖</figcaption>
-        </figure>
-
-        <figure>
-            <figcaption>Get browser details using
-                <code>add function</code>.</figcaption>
-            <pre>
+    <figure>
+        <figcaption>Get browser details using
+            <code>add function</code>.</figcaption>
+        <pre>
         function add(a,b){
             return a+b;
         }
             </pre>
-        </figure>
+    </figure>
 
 
-        <figure>
-            <figcaption>
-                <cite>孔子:</cite>
-            </figcaption>
-            <blockquote>学而时习之，不亦说乎！</blockquote>
-        </figure>
+    <figure>
+        <figcaption>
+            <cite>孔子:</cite>
+        </figcaption>
+        <blockquote>学而时习之，不亦说乎！</blockquote>
+    </figure>
 
-        <figure>
-            <p style="white-space:pre">
-                Bid me discourse, I will enchant thine ear,
-                                Or like a fairy trip upon the green,
-                                Or, like a nymph, with long dishevell'd hair,
-                                Dance on the sands, and yet no footing seen:
-                                Love is a spirit all compact of fire,
-                                Not gross to sink, but light, and will aspire.</p>
-            <figcaption>
-                <cite>Venus and Adonis</cite>, by William Shakespeare</figcaption>
-        </figure>
-    </body>
+    <figure>
+        <p style="white-space:pre">
+            Bid me discourse, I will enchant thine ear, Or like a fairy trip upon the green, Or, like a nymph, with long dishevell'd hair, Dance on the sands, and yet no footing seen: Love is a spirit all compact of fire, Not gross to sink, but light, and will aspire.</p>
+        <figcaption>
+            <cite>Venus and Adonis</cite>, by William Shakespeare</figcaption>
+    </figure>
+    <hr>
+    <h2>响应式图片</h2>
+
+</body>
+
 </html>

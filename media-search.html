@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>媒体查询</title>
+    <style>
+        /* 屏宽 */
+        
+        @media screen and (max-width:960px) {
+            body {
+                color: red;
+            }
+        }
+        
+        @media screen and (min-width:96px) {
+            body {
+                color: blue;
+            }
+        }
+        /* 横放 */
+        
+        @media (orientation: landscape) {
+            body {
+                background-color: aqua;
+            }
+        }
+        /* 竖放 */
+        
+        @media (orientation: portrait) {
+            body {
+                background-color: aquamarine;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>媒体查询 -- 屏幕宽度</h1>
+
+</body>
+
+</html>
