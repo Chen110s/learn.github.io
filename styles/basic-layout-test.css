@@ -1,0 +1,112 @@
+/* 第一步 -- 正常布局流 
+--------------------------------------------------*/
+
+
+/* 白色背景, 黑色字体,外边距为零内容完美贴合窗口, 
+字体大小1.2em = 19.2px, 行高1.2, 字体样式*/
+
+body {
+    background-color: #fff;
+    color: #333;
+    margin: 0;
+    font: 1.2em / 1.2 Arial, Helvetica, sans-serif;
+}
+
+
+/* 响应式图片,可小不可大,设置为块元素独立一行 */
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* 相对正文两倍大小, 内边距上下50px左右20px, 水平居中,最大宽度980px */
+
+.logo {
+    font-size: 200%;
+    padding: 50px 20px;
+    margin: 0 auto;
+    max-width: 980px;
+}
+
+.grid {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 980px;
+}
+
+
+/* 导航栏黑色背景,内边距8px */
+
+nav {
+    background-color: #000;
+    padding: .5em;
+}
+
+
+/* 取消内外边距, 取消列表默认样式 */
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+/* 取消链接下划线 */
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: .5em 1em;
+}
+
+
+/* 图片无间隔,取消列表默认样式 */
+
+.photos {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.feature {
+    width: 200px;
+}
+
+
+/* 响应式布局 */
+
+@media screen and (max-width:980px) {
+    nav {
+        text-align: center;
+    }
+}
+
+@media screen and (min-width:980px) {
+    /* 导航栏
+-------------------------------------------------- */
+    nav ul {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-flow: row wrap;
+    }
+    nav li {
+        flex: 1 100px;
+    }
+    /* 主要内容的2列布局
+-------------------------------------------------- */
+    .grid {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        gap: 5px;
+    }
+    /* photos */
+    .photos {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
