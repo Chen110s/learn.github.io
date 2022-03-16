@@ -1,0 +1,29 @@
+html {
+    font-family: sans-serif, '黑体';
+}
+
+body {
+    width: 50%;
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 1.5;
+    background: url('../images/bg.png');
+    background-position-x: 50%;
+    background-position-y: 25%;
+    background-attachment: fixed;
+}
+
+h1 {
+    text-align: center;
+    text-shadow: 1px 1px 1px blue, 3px 3px 1px blue;
+}
+
+@media screen and (max-width:768px) {
+    body {
+        width: 98%;
+        margin: 0 auto;
+        font-size: 1.5rem;
+    }
+}
