@@ -1,0 +1,9 @@
+html {
+    font-family: serif, '粗体';
+}
+
+body {
+    width: 50%;
+    max-width: 800px;
+    margin: 0 auto;
+}
