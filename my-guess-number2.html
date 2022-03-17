@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的猜数游戏</title>
+    <style>
+        html {
+            font-family: serif;
+        }
+        
+        body {
+            width: 50%;
+            max-width: 800px;
+            margin: 0 auto;
+            font-weight: bold;
+            background-image: url('./images/big-bg.jpg');
+            background-position: 25% 20%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>猜数游戏</h1>
+    <p>随机一个百以内的数字, 你有十次猜数机会.</p>
+    <div class="form">
+        <label for="guess">我猜:</label>
+        <input type="text" id="guess" class="guess">
+        <input type="submit" class="guessSubmit">
+    </div>
+    <div class="resultParas">
+        <p class="guesses"></p>
+        <p class="lastResult"></p>
+        <p class="lowOrHi"></p>
+    </div>
+    <script src="./scripts/my-guess-number2.js"></script>
+</body>
+
+</html>
