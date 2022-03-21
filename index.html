@@ -5,111 +5,109 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>事件对象.target的实例</title>
-    <style>
-        .tile {
-            height: 100px;
-            width: 25%;
-            float: left;
-        }
-    </style>
+    <title>前端学习主页</title>
+    <link rel="stylesheet" href="./styles/index.css">
 </head>
 
 <body>
-    <div id="container">
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-    </div>
+    <header>
+        <h1>学习目标</h1>
+    </header>
+    <article>
+        <ol>
+            <li>
+                <h2>HTML了解</h2>
+            </li>
+            <ul type="square">
+                <li> <a href="./htmlBasic.html" target="_blank" rel="noopener noreferrer">HTML基础</a> </li>
+                <li> <a href="./HTMLExplain.html" target="_blank" rel="noopener noreferrer">html网页内容解释</a></li>
+                <li> <a href="https://baijiahao.baidu.com/s?id=1699512661005789184&wfr=spider&for=pc" target="_blank" rel="noopener noreferrer">html网页内容解释（转载）仅供参考</a> </li>
+                <li> <a href="./firefox.html" target="_blank" rel="noopener noreferrer">快动动小手，做一个这样的小作品吧</a></li>
+            </ul>
+            <li>
+                <h2>CSS了解</h2>
+            </li>
+            <ul type="disc">
+                <li> <a href="./cssBasic.html" target="_blank">用CSS修改基础作品</a></li>
+            </ul>
+            <li>
+                <h2>JavaScript了解</h2>
+            </li>
+            <ul>
+                <li> <a href="./JavaScript基础.html" target="_blank" rel="noopener noreferrer">用JavaScript修改基础作品</a> </li>
+            </ul>
+            <li>
+                <h2>HTML学习</h2>
+            </li>
+            <ul type="circle">
+                <li> <a href="./html-all.html" target="_blank" rel="noopener noreferrer">html入门</a> </li>
+                <li> <a href="./html-all-page.html" target="_blank" rel="noopener noreferrer">春晓</a> </li>
+                <li> <a href="./head.html" target="_blank" rel="noopener noreferrer">html head</a> </li>
+                <li> <a href="./text.html" target="_blank" rel="noopener noreferrer">HTML标题和段落实例、超链接</a> </li>
+                <li> <a href="./simple-structure.html" target="_blank" rel="noopener noreferrer">简单网页结构的语义化</a> </li>
+                <li> <a href="./email.html" target="_blank" rel="noopener noreferrer">信件格式</a> </li>
+                <li> <a href="./see-bird.html" target="_blank" rel="noopener noreferrer">手打观鸟网</a> </li>
+                <li> <a href="./images.html" target="_blank" rel="noopener noreferrer">HTML图片</a> </li>
+                <li> <a href="./Mozilla-page.html" target="_blank" rel="noopener noreferrer">响应式图片——Mozilla 宣传主页</a> </li>
+                <li> <a href="./video-and-audio.html" target="_blank" rel="noopener noreferrer">HTML视频、音频</a> </li>
+                <li> <a href="./table-examples.html" target="_blank" rel="noopener noreferrer">HTML基础表格实例</a> </li>
+                <li> <a href="./table-example2.html" target="_blank" rel="noopener noreferrer">HTML表格结构化和无障碍</a> </li>
+                <li> <a href="./planet-data.html" target="_blank" rel="noopener noreferrer">表格实例（id和headers）</a> </li>
 
-    <script>
-        function random(number) {
-            return Math.floor(Math.random() * number);
-        }
+            </ul>
+            <li>
+                <h2>CSS学习</h2>
+            </li>
+            <ul>
+                <li><a href="./css-strart.html" target="_blank" rel="noopener noreferrer">css起步</a></li>
+                <li><a href="./biography.html" target="_blank" rel="noopener noreferrer">个人主页第一次尝试</a></li>
+                <li><a href="./cascade.html" target="_blank" rel="noopener noreferrer">层叠与继承实例</a></li>
+                <li><a href="./selector01.html" target="_blank" rel="noopener noreferrer">类型、类和ID选择器实例</a></li>
+                <li><a href="./attr-selector.html" target="_blank" rel="noopener noreferrer">属性选择器实例</a></li>
+                <li><a href="./pseudo-class.html" target="_blank" rel="noopener noreferrer">伪类选择器实例</a></li>
+                <li><a href="./pseudo-element.html" target="_blank" rel="noopener noreferrer">伪元素选择器实例</a></li>
+                <li><a href="./box-model.html" target="_blank" rel="noopener noreferrer">盒模型实例</a></li>
+                <li><a href="./different-text-directions.html" target="_blank" rel="noopener noreferrer">书写模式</a></li>
+                <li><a href="./overflowing-content.html" target="_blank" rel="noopener noreferrer">内容溢出</a></li>
+                <li><a href="./img-overflow.html" target="_blank" rel="noopener noreferrer">图片溢出处理方法</a></li>
+                <li><a href="./Replaced-elements-in-layout.html" target="_blank" rel="noopener noreferrer">布局中图片的不成熟处理方法</a></li>
+                <li><a href="./a-table.html" target="_blank" rel="noopener noreferrer">表格学习</a></li>
+                <li><a href="./table-test.html" target="_blank" rel="noopener noreferrer">牛刀小试——表格</a></li>
+                <li><a href="./text-test.html" target="_blank" rel="noopener noreferrer">牛刀小试——文本</a></li>
+                <li><a href="./list-test.html" target="_blank" rel="noopener noreferrer">牛刀小试——列表</a></li>
+                <li><a href="./a-test-nav.html" target="_blank" rel="noopener noreferrer">将链接样式化为按钮——导航栏</a></li>
+                <li> <a href="./test-collegue-community.html" target="_blank" rel="noopener noreferrer">牛刀小试——大学社区</a></li>
+                <li> <a href="./css-layout.html" target="_blank" rel="noopener noreferrer">布局一览</a></li>
+                <li> <a href="./flexbox.html" target="_blank" rel="noopener noreferrer">弹性盒子</a></li>
+                <li> <a href="./flexbox-wrap.html" target="_blank" rel="noopener noreferrer">弹性盒子 -- flex-wrap</a></li>
+                <li> <a href="./flex-align.html" target="_blank" rel="noopener noreferrer">弹性布局</a></li>
+                <li> <a href="./grid-column-row.html" target="_blank" rel="noopener noreferrer">网格布局</a></li>
+                <li> <a href="./float-layout.html" target="_blank" rel="noopener noreferrer">引入浮动</a></li>
+                <li> <a href="./float-layout2.html" target="_blank" rel="noopener noreferrer">浮动之两列布局</a></li>
+                <li> <a href="./float-layout3.html" target="_blank" rel="noopener noreferrer">清除浮动之三列布局</a></li>
+                <li> <a href="./position-layout.html" target="_blank" rel="noopener noreferrer">定位布局 -- 黏性和固定</a></li>
+                <li> <a href="./multicol.html" target="_blank" rel="noopener noreferrer">多列布局1</a></li>
+                <li> <a href="./multicol2.html" target="_blank" rel="noopener noreferrer">多列布局2</a></li>
+                <li> <a href="./media-search.html" target="_blank" rel="noopener noreferrer">媒体查询</a></li>
+                <li> <a href="./mobile-first-layout.html" target="_blank" rel="noopener noreferrer">移动优先的响应式网页</a></li>
+                <li> <a href="./basic-layout-test.html" target="_blank" rel="noopener noreferrer">牛刀小试 -- 响应式网页</a></li>
+            </ul>
+            <li>
+                <h2>JavaScript学习</h2>
+            </li>
+            <ul>
+                <li> <a href="./js-number-guess-game.html" target="_blank" rel="noopener noreferrer">猜数字小游戏</a></li>
+                <li> <a href="./my-guess-number.html" target="_blank" rel="noopener noreferrer">我的猜数游戏(边打边看 (～￣▽￣)～  )</a></li>
+                <li> <a href="./my-guess-number2.html" target="_blank" rel="noopener noreferrer">我的猜数游戏(大早上起来自己打的 最终版)</a></li>
+                <li> <a href="./Joke-generator.html" target="_blank" rel="noopener noreferrer">这就是一个笑话</a></li>
+                <li> <a href="./variable-test.html" target="_blank" rel="noopener noreferrer">求一个数的平方,立方,阶乘</a></li>
+                <li> <a href="./event.html" target="_blank" rel="noopener noreferrer">js随机背景色</a> </li>
+                <li> <a href="./event-target-example.html" target="_blank" rel="noopener noreferrer">事件对象.target的实例</a></li>
 
-        function bgChange() {
-            const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
-            return rndCol;
-        }
-
-        // 绑定的是爸爸级别的元素 用匿名函数
-        const container = document.querySelector('#container');
-        container.addEventListener('click', event => event.target.style.backgroundColor = bgChange());
-    </script>
-</body>
-
-</html>
-<li> <a href="./table-example2.html" target="_blank" rel="noopener noreferrer">HTML表格结构化和无障碍</a> </li>
-<li> <a href="./planet-data.html" target="_blank" rel="noopener noreferrer">表格实例（id和headers）</a> </li>
-
-</ul>
-<li>
-    <h2>CSS学习</h2>
-</li>
-<ul>
-    <li><a href="./css-strart.html" target="_blank" rel="noopener noreferrer">css起步</a></li>
-    <li><a href="./biography.html" target="_blank" rel="noopener noreferrer">个人主页第一次尝试</a></li>
-    <li><a href="./cascade.html" target="_blank" rel="noopener noreferrer">层叠与继承实例</a></li>
-    <li><a href="./selector01.html" target="_blank" rel="noopener noreferrer">类型、类和ID选择器实例</a></li>
-    <li><a href="./attr-selector.html" target="_blank" rel="noopener noreferrer">属性选择器实例</a></li>
-    <li><a href="./pseudo-class.html" target="_blank" rel="noopener noreferrer">伪类选择器实例</a></li>
-    <li><a href="./pseudo-element.html" target="_blank" rel="noopener noreferrer">伪元素选择器实例</a></li>
-    <li><a href="./box-model.html" target="_blank" rel="noopener noreferrer">盒模型实例</a></li>
-    <li><a href="./different-text-directions.html" target="_blank" rel="noopener noreferrer">书写模式</a></li>
-    <li><a href="./overflowing-content.html" target="_blank" rel="noopener noreferrer">内容溢出</a></li>
-    <li><a href="./img-overflow.html" target="_blank" rel="noopener noreferrer">图片溢出处理方法</a></li>
-    <li><a href="./Replaced-elements-in-layout.html" target="_blank" rel="noopener noreferrer">布局中图片的不成熟处理方法</a></li>
-    <li><a href="./a-table.html" target="_blank" rel="noopener noreferrer">表格学习</a></li>
-    <li><a href="./table-test.html" target="_blank" rel="noopener noreferrer">牛刀小试——表格</a></li>
-    <li><a href="./text-test.html" target="_blank" rel="noopener noreferrer">牛刀小试——文本</a></li>
-    <li><a href="./list-test.html" target="_blank" rel="noopener noreferrer">牛刀小试——列表</a></li>
-    <li><a href="./a-test-nav.html" target="_blank" rel="noopener noreferrer">将链接样式化为按钮——导航栏</a></li>
-    <li> <a href="./test-collegue-community.html" target="_blank" rel="noopener noreferrer">牛刀小试——大学社区</a></li>
-    <li> <a href="./css-layout.html" target="_blank" rel="noopener noreferrer">布局一览</a></li>
-    <li> <a href="./flexbox.html" target="_blank" rel="noopener noreferrer">弹性盒子</a></li>
-    <li> <a href="./flexbox-wrap.html" target="_blank" rel="noopener noreferrer">弹性盒子 -- flex-wrap</a></li>
-    <li> <a href="./flex-align.html" target="_blank" rel="noopener noreferrer">弹性布局</a></li>
-    <li> <a href="./grid-column-row.html" target="_blank" rel="noopener noreferrer">网格布局</a></li>
-    <li> <a href="./float-layout.html" target="_blank" rel="noopener noreferrer">引入浮动</a></li>
-    <li> <a href="./float-layout2.html" target="_blank" rel="noopener noreferrer">浮动之两列布局</a></li>
-    <li> <a href="./float-layout3.html" target="_blank" rel="noopener noreferrer">清除浮动之三列布局</a></li>
-    <li> <a href="./position-layout.html" target="_blank" rel="noopener noreferrer">定位布局 -- 黏性和固定</a></li>
-    <li> <a href="./multicol.html" target="_blank" rel="noopener noreferrer">多列布局1</a></li>
-    <li> <a href="./multicol2.html" target="_blank" rel="noopener noreferrer">多列布局2</a></li>
-    <li> <a href="./media-search.html" target="_blank" rel="noopener noreferrer">媒体查询</a></li>
-    <li> <a href="./mobile-first-layout.html" target="_blank" rel="noopener noreferrer">移动优先的响应式网页</a></li>
-    <li> <a href="./basic-layout-test.html" target="_blank" rel="noopener noreferrer">牛刀小试 -- 响应式网页</a></li>
-</ul>
-<li>
-    <h2>JavaScript学习</h2>
-</li>
-<ul>
-    <li> <a href="./js-number-guess-game.html" target="_blank" rel="noopener noreferrer">猜数字小游戏</a></li>
-    <li> <a href="./my-guess-number.html" target="_blank" rel="noopener noreferrer">我的猜数游戏(边打边看 (～￣▽￣)～  )</a></li>
-    <li> <a href="./my-guess-number2.html" target="_blank" rel="noopener noreferrer">我的猜数游戏(大早上起来自己打的 最终版)</a></li>
-    <li> <a href="./Joke-generator.html" target="_blank" rel="noopener noreferrer">这就是一个笑话</a></li>
-    <li> <a href="./variable-test.html" target="_blank" rel="noopener noreferrer">求一个数的平方,立方,阶乘</a></li>
-    <li> <a href="./event.html" target="_blank" rel="noopener noreferrer">js随机背景色</a> </li>
-    <li>
-        <a href="./event-target-example.html" target="_blank" rel="noopener noreferrer">事件对象.target的实例</a>
-    </li>
-</ul>
-</ol>
-</article>
-<footer class="content">Ctrl+U 查看原码</footer>
+            </ul>
+        </ol>
+    </article>
+    <footer class="content">Ctrl+U 查看原码</footer>
 
 
 </body>
