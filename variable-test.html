@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数的平方、立方、阶乘</title>
+</head>
+
+<body>
+    <div>
+        <label for="text">请输入一个数字:</label>
+        <input type="text" name="text" id="text" class="text">
+        <input type="submit" value="确定" class="submit">
+    </div>
+
+    <section></section>
+    <script>
+        const text = document.querySelector('.text');
+        const submit = document.querySelector('.submit');
+        const section = document.querySelector('section');
+
+        submit.addEventListener('click', show);
+
+        function show() {
+            let num = text.value;
+            let para = document.createElement('p');
+
+            if (isNaN(num)) {
+                para.textContent = 'You need to enter a number!';
+            } else {
+                let arr = [];
+                arr.push(squared(num));
+                arr.push(cubed(num));
+                arr.push(factorial(num));
+
+                para.textContent += String(num) + '的平方,立方,阶乘分别是: ';
+                for (let i = 0; i < 3; i++) {
+                    para.textContent += arr[i] + ',';
+                }
+            }
+            section.appendChild(para);
+        }
+
+        // 平方
+        function squared(num) {
+            return num * num;
+        }
+
+        // 立方
+        function cubed(num) {
+            return num * num * num;
+        }
+
+        // 阶乘
+        function factorial(num) {
+            var x = num;
+            while (x > 1) {
+                num *= x - 1;
+                x--;
+            }
+            return num;
+        }
+    </script>
+</body>
+
+</html>
