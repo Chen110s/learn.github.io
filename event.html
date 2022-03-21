@@ -26,6 +26,11 @@
 
     // 为元素的点击事件绑定行为
     btn.addEventListener('click', bgChange);
+
+    btn.focus();
+    window.addEventListener('keydown', event => {
+        if (event.keyCode === 13) bgChange();
+    })
 </script>
 
 </html>

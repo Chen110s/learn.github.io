@@ -15,7 +15,7 @@
         <input type="submit" value="确定" class="submit">
     </div>
 
-    <section></section>
+    <section> </section>
     <script>
         const text = document.querySelector('.text');
         const submit = document.querySelector('.submit');
@@ -41,6 +41,7 @@
                 }
             }
             section.appendChild(para);
+            text.value = '';
         }
 
         // 平方
@@ -62,6 +63,11 @@
             }
             return num;
         }
+
+        text.focus();
+        window.addEventListener('keydown', event => {
+            if (event.keyCode === 13) show();
+        })
     </script>
 </body>
 
