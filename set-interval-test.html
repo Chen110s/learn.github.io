@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>秒表</title>
+    <style>
+        .container {
+            width: 800px;
+            margin: 0 auto;
+            border: 3px solid black;
+        }
+        
+        p {
+            text-align: center;
+            margin-bottom: 0;
+            width: 100%;
+            font-size: 2rem;
+            padding-bottom: 1rem;
+        }
+        
+        .btns {
+            width: 100%;
+        }
+        
+        button {
+            width: 100%;
+            background-color: blue;
+            color: white;
+        }
+        
+        button:hover {
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <p></p>
+        <div class=".btns">
+            <button>开始</button>
+            <button>停止</button>
+            <button>清零</button>
+        </div>
+    </div>
+</body>
+<script>
+    const para = document.querySelector('p');
+    const btn = document.querySelectorAll('button');
+
+    let count = 0;
+    let state;
+    para.textContent = count + 's';
+
+    function change() {
+        para.textContent = count + 's';
+        count++;
+    }
+
+    function clear(e) {
+        clearInterval(e);
+    }
+
+    btn["0"].addEventListener('click', function() {
+        state = setInterval(change, 1000);
+        btn["0"].innerHTML = '开始';
+    });
+    btn["1"].addEventListener('click', function() {
+        clear(state);
+        para.textContent = count + 's';
+        btn["0"].innerHTML = '继续';
+    });
+    btn["2"].addEventListener('click', function() {
+        count = 0;
+        para.textContent = count + 's';
+        btn["0"].innerHTML = '开始';
+    });
+</script>
+
+</html>
