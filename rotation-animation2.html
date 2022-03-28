@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>拼手速</title>
+    <link rel="stylesheet" href="./styles/rotation-animation2.css">
+</head>
+
+<body>
+
+    <div class="spinner">
+        <div>
+            <p>↻</p>
+        </div>
+    </div>
+
+    <section class="ui">
+        <div class="topbar">
+            <p class="p1">Player 1: "A"</p>
+            <p class="p2">Player 2: "L"</p>
+            <div class="middlebar">
+                <button>开始游戏</button>
+                <p class="result"></p>
+            </div>
+        </div>
+    </section>
+    <script>
+        // 元素的引用
+        const spinner = document.querySelector('.spinner p');
+        const spinnerContainer = document.querySelector('.spinner');
+        let rotateCount = 0; //每帧旋转多少度
+        let startTime = null; // 开始时间戳
+        let rAF;
+        const btn = document.querySelector('button');
+        const result = document.querySelector('.result');
+
+        // 函数: 指定随机数范围[min,max)
+        function random(min, max) {
+            return Math.floor(Math.random() * (max - min)) + min;
+        }
+
+        function draw(timestamp) {
+            if (!startTime) {
+                startTime = timestamp;
+            }
+
+            let rotateCount = (timestamp - startTime) / 3;
+
+            if (rotateCount > 359) {
+                rotateCount %= 360;
+            }
+
+            spinner.style.transform = `rotate(${rotateCount}deg)`;
+            rAF = requestAnimationFrame(draw);
+        }
+
+        result.style.display = 'none';
+        spinnerContainer.style.display = 'none';
+
+        function reset() {
+            btn.style.display = 'block';
+            result.textContent = '';
+            result.style.display = 'none';
+        }
+
+        btn.addEventListener('click', start);
+
+        function start() {
+            draw();
+            btn.style.display = 'none';
+            spinnerContainer.style.display = 'block';
+            setTimeout(setEndGame, random(5000, 10000));
+        }
+
+        function setEndGame() {
+            cancelAnimationFrame(rAF);
+
+            spinnerContainer.style.display = 'none';
+            result.style.display = 'block';
+            result.textContent = '!!! 游戏开始 !!!'
+
+            document.addEventListener('keydown', keyHandler);
+
+            function keyHandler(e) {
+                console.log(e.key);
+                if (e.key === 'a' || e.key === 'A') {
+                    result.textContent = '玩家1胜利';
+                } else if (e.key === 'l' || e.key === 'L') {
+                    result.textContent = '玩家2胜利';
+                }
+
+                document.removeEventListener('keydown', keyHandler);
+                setTimeout(reset, 5000);
+            };
+        }
+    </script>
+
+</body>
+
+</html>
