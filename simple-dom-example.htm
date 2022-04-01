@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple DOM example</title>
+    <style>
+        .highlight {
+            color: white;
+            background-color: black;
+            padding: 10px;
+            width: 250px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <img src="./images/dinosaur.png" alt="红霸王：两条腿像人一样直立的恐龙，小爪子和一个有许多锋利的牙齿的大脑袋。">
+        <p>在这里，我们将添加一个指向 <a href="https://developer.mozilla.org/zh-CN/docs/Learn">开发者社区</a></p>
+    </section>
+
+    <script>
+        // 元素引用
+        var link = document.querySelector('a');
+        // 更新文字
+        link.textContent = '开发者社区';
+        // 修改链接指向的URL
+        link.href = 'https://developer.mozilla.org/zh-CN/docs/Learn';
+
+        // 创建新的元素节点
+        var sect = document.querySelector('section');
+
+        // 创建一个段落节点
+        var para = document.createElement('p');
+        para.textContent = '我们希望你喜欢这趟旅程。';
+        sect.appendChild(para);
+
+        // 创建文本节点
+        var text = document.createTextNode(' - 网站开发知识的首要来源。 ');
+        var linkPara = document.querySelector('p');
+        linkPara.appendChild(text);
+
+        // 将已有元素移到末尾
+        sect.appendChild(linkPara);
+        linkPara.parentNode.removeChild(linkPara);
+
+        // para.style.color = 'white';
+        // para.style.backgroundColor = 'black';
+        // para.style.padding = '10px';
+        // para.style.width = '250px';
+        // para.style.textAlign = 'center';
+
+        para.setAttribute('class', 'highlight');
+    </script>
+</body>
+
+</html>

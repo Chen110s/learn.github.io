@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>购物清单</title>
+    <style>
+        li {
+            margin-bottom: 10px;
+        }
+        
+        li button {
+            font-size: 8px;
+            margin-left: 20px;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>My shopping list</h1>
+
+    <div>
+        <label for="item">Enter a new item:</label>
+        <input type="text" name="item" id="item">
+        <button>Add item</button>
+    </div>
+
+    <ul>
+
+    </ul>
+
+    <script>
+        var itemInput = document.querySelector('input');
+        itemInput.focus();
+
+        var addBtn = document.querySelector('button');
+        var listUl = document.querySelector('ul');
+
+        addBtn.addEventListener('click', addItem);
+
+        function addItem() {
+            let value = itemInput.value;
+            item.value = '';
+
+            let itemLi = document.createElement('li');
+            let itemSpan = document.createElement('span');
+            let itemBtn = document.createElement('button');
+
+            itemSpan.textContent = value;
+            itemBtn.textContent = 'Delete';
+
+            itemLi.appendChild(itemSpan);
+            itemLi.appendChild(itemBtn);
+
+            listUl.appendChild(itemLi);
+
+            itemBtn.addEventListener('click', del);
+
+            function del() {
+                itemLi.parentNode.removeChild(itemLi);
+            }
+
+            itemInput.focus();
+        }
+        window.addEventListener('keydown', keyHandler);
+
+        function keyHandler(e) {
+            // console.log(e.key);
+            switch (e.key) {
+                case 'Enter':
+                    addItem();
+                    break;
+            }
+        }
+    </script>
+</body>
+
+</html>
