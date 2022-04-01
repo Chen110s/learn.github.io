@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promise测试</title>
+</head>
+
+<body>
+    <p>Ctrl+U查看原码</p>
+    <script>
+        let a = fetchAndDecode('https://img1.baidu.com/it/u=3702625202,3169032464&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500', 'blob');
+        let b = fetchAndDecode('https://img1.baidu.com/it/u=2769047888,512921539&fm=253&fmt=auto&app=138&f=JPEG?w=657&h=500', 'blob');
+        let c = fetchAndDecode('https://img2.baidu.com/it/u=703207382,3730089159&fm=253&fmt=auto&app=138&f=JPEG?w=260&h=195', 'blob');
+        // Promise.all([a, b, c])
+
+        // 根据url获取资源， 根据type进行解读(图像blob 和文本text)
+        function fetchAndDecode(url, type) {
+            return fetch(url).then(response => {
+                    if (type === 'blob') {
+                        return response.blob();
+                    } else if (type === 'text') {
+                        return response.text();
+                    }
+                })
+                .catch(e => {
+                    console.log('There has been a problem with your fetch operation: ' +
+                        e.message);
+                })
+                .finally(() => {
+                    console.log(`fetch attempt for "${url}" finished.`)
+                });
+        }
+
+
+        Promise.all([a, b, c])
+            .then(values => { // values = [a-results, b-results, c-results]
+                console.log(values);
+                let objectURL1 = URL.createObjectURL(values[0]);
+                let objectURL2 = URL.createObjectURL(values[1]);
+                let objectURL3 = URL.createObjectURL(values[2]); // 如果是文本 let descText = values[2];存的是文本内容
+
+                let image1 = document.createElement('img');
+                let image2 = document.createElement('img');
+                let image3 = document.createElement('img');
+
+                image1.src = objectURL1;
+                image2.src = objectURL2;
+                image3.src = objectURL3;
+
+                document.body.appendChild(image1);
+                document.body.appendChild(image2);
+                document.body.appendChild(image3);
+            })
+    </script>
+</body>
+
+</html>
