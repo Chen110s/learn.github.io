@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+     
+    <meta charset="UTF-8" />
+     
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+     
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     
+    <title>五子棋游戏</title>
+  </head>
+
+  <body>
+      <canvas id="canvas"></canvas>
+
+     
+    <script>
+      // 要求: 20X20 白先,黑后 五子相连获胜
+      // 创建画布
+      const canvas = document.getElementById("canvas");
+      const context = canvas.getContext("2d");
+
+      // 设置棋盘options{棋子大小, 轴线数量, 轴线颜色 }
+      var { padding, count, borderColor } = {
+        padding: 40,
+        count: 20,
+        borderColor: "black",
+      };
+      var half_padding = padding / 2;
+      canvas.width = canvas.height = padding * count;
+      context.strokeStyle = borderColor;
+      // 画棋盘
+      context.fillStyle = "#eabc79";
+      context.fillRect(0, 0, padding * count, padding * count);
+      for (let i = 0; i < count; i++) {
+        // count条竖线
+        context.moveTo(half_padding + i * padding, half_padding);
+        context.lineTo(
+          half_padding + i * padding,
+          padding * count - half_padding
+        );
+        context.stroke();
+        // count条横线
+        context.moveTo(half_padding, half_padding + i * padding);
+        context.lineTo(
+          count * padding - half_padding,
+          half_padding + i * padding
+        );
+        context.stroke();
+      }
+
+      // 下棋角色
+      var role = 1;
+      // 棋子矩阵
+      var checkerBoard = [];
+      for (let i = 0; i < count; i++) {
+        checkerBoard[i] = [];
+        for (let j = 0; j < count; j++) {
+          checkerBoard[i][j] = 0;
+        }
+      }
+
+      // 绘制黑棋或白棋
+      function drawChessman(x, y, isBlack) {
+        let gradient = context.createRadialGradient(x, y, 10, x - 5, y - 5, 0);
+        context.beginPath();
+        context.arc(
+          x * padding + padding / 2,
+          y * padding + padding / 2,
+          10,
+          0,
+          2 * Math.PI
+        );
+        context.closePath();
+        if (isBlack) {
+          gradient.addColorStop(0, "#0a0a0a");
+          gradient.addColorStop(1, "#636766");
+        } else {
+          gradient.addColorStop(0, "#d1d1d1");
+          gradient.addColorStop(1, "#f9f9f9");
+        }
+        context.fillStyle = gradient;
+        context.fill();
+      }
+
+      // 判赢函数使用,按条件合并相邻项
+      function adjoin(dataList, checker) {
+        let res = [];
+        for (let i = 0, len = dataList.length; i < len; i++) {
+          let tmp = [];
+          while (i < len) {
+            if (checker(dataList[i])) {
+              tmp.push(dataList[i++]);
+            } else {
+              break;
+            }
+          }
+          if (tmp.length > 0) {
+            res.push(tmp);
+          }
+          if (i < len) {
+            res.push(dataList[i]);
+          }
+        }
+        return res;
+      }
+
+      // 判赢函数使用,宣布胜利者
+      function winGame(res, role) {
+        res.forEach((item) => {
+          if (item.length >= 5) {
+            let text = role == 2 ? "白子获胜" : "黑子获胜";
+            context.fillStyle = "#eabc79";
+            context.fillRect(0, 0, padding * count, padding * count);
+            context.font = "30px Verdana";
+            let gradient = context.createLinearGradient(0, 0, canvas.width, 0);
+            gradient.addColorStop("0", "magenta");
+            gradient.addColorStop("0.5", "blue");
+            gradient.addColorStop("1.0", "red");
+            context.fillStyle = gradient;
+            context.fillText(
+              text,
+              (count * padding) / 2 - 60,
+              (count * padding) / 2 - 60
+            );
+          }
+        });
+      }
+
+      // 判赢函数
+      function checkReferee(x, y, role) {
+        if (x == undefined || y == undefined || role == undefined) return;
+        // x
+        let res = adjoin(checkerBoard[x], (item) => item == role);
+        winGame(res, role);
+        // y
+        let arr = [];
+        for (let t = 0; t < count; t++) {
+          arr.push(checkerBoard[t][y]);
+        }
+        res = adjoin(arr, (item) => item == role);
+        winGame(res, role);
+        // k=+x
+        arr = [];
+        for (let t = -4; t < 5; t++) {
+          if (x + t >= 0 && y + t >= 0) arr.push(checkerBoard[x + t][y + t]);
+        }
+        res = adjoin(arr, (item) => item == role);
+        winGame(res, role);
+        // k=-x
+        arr = [];
+        for (let tx = -4, ty = 4; tx < 5; tx++, ty--) {
+          if (x + tx >= 0 && y + ty >= 0)
+            arr.push(checkerBoard[x + tx][y + ty]);
+        }
+        res = adjoin(arr, (item) => item == role);
+        winGame(res, role);
+      }
+
+      // 监听落子
+      canvas.onclick = (event) => {
+        let { offsetX: x, offsetY: y } = event;
+        // 棋子数组坐标x,y
+        x = Math.abs(Math.round((x - padding / 2) / padding));
+        y = Math.abs(Math.round((y - padding / 2) / padding));
+        if (
+          checkerBoard[x][y] !== undefined &&
+          Object.is(checkerBoard[x][y], 0)
+        ) {
+          role = Object.is(role, 1) ? 2 : 1;
+
+          checkerBoard[x][y] = role;
+          drawChessman(x, y, Object.is(role, 1));
+          checkReferee(x, y, role);
+        }
+      };
+    </script>
+  </body>
+</html>
