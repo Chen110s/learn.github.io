@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>地理位置API实例</title>
+</head>
+
+<body>
+    <div id="map_canvas"></div>
+    <script>
+        // Geolocation.getCurrentPosition() 方法返回设备的当前位置。
+        navigator.geolocation.getCurrentPosition(function(position) {
+            // 位置 = 经纬度
+            var latlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+            var myOptions = {
+                    zoom: 8,
+                    center: latlng, //位置
+                    mapTypeId: google.maps.MapTypeId.TERRAIN,
+                    disableDefaultUI: true
+                }
+                // 创建地图
+            var map = new google.maps.Map(document.querySelector("#map_canvas"), myOptions);
+        });
+    </script>
+</body>
+
+</html>

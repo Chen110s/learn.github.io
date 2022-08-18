@@ -11,6 +11,9 @@ html {
 }
 
 body {
+    width: 80%;
+    margin: 0 auto;
+    height: 100vh;
     padding-left: 2rem;
     font-size: 2.2rem;
     font-family: '楷体', Cochin, Georgia, Times, 'Times New Roman', serif;

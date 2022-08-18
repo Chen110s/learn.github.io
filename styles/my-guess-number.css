@@ -6,4 +6,8 @@ body {
     width: 50%;
     max-width: 800px;
     margin: 0 auto;
+    background: url('../images/bg.png');
+    background-position-x: 50%;
+    background-position-y: 25%;
+    background-attachment: fixed;
 }

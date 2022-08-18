@@ -1,0 +1,15 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../images/big-bg.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: black;
+    background-position: center;
+}
+
+.box {
+    border: 3px solid rebeccapurple;
+    font-size: 250%;
+    opacity: 0.4;
+}

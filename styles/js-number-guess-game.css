@@ -6,6 +6,7 @@ body {
     width: 50%;
     max-width: 800px;
     margin: 0 auto;
+    font-size: 1.2rem;
     font-weight: bold;
     line-height: 1.5;
     background: url('../images/bg.png');

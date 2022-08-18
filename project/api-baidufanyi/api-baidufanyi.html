@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>百度api在线翻译</title>
+    <style>
+        /* 通用样式 */
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        html {
+            color: black;
+            font-size: 10px;
+        }
+        
+        body {
+            width: 1200px;
+            font-size: 2rem;
+            margin: 0 auto;
+        }
+        /* 页眉 */
+        
+        header {
+            border: 5px solid black;
+        }
+        
+        h1 {
+            text-align: center;
+        }
+        /* 导航栏 */
+        
+        nav {
+            display: flex;
+            height: 30px;
+            margin-top: 20px;
+            padding-top: 3px;
+            padding-bottom: 3px;
+            align-items: center;
+            justify-content: space-around;
+        }
+        
+        nav>select {
+            flex: 2;
+            font-size: 2rem;
+            font-size: bold;
+            text-align: center;
+            border: 2px solid black;
+        }
+        
+        nav>span {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        
+        nav>button {
+            flex: 1;
+            font-size: 2rem;
+            margin-left: 5px;
+            background-color: aqua;
+            border: 2px solid black;
+        }
+        /* 内容样式 */
+        
+        main {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        main>textarea {
+            font-size: 2rem;
+        }
+        
+        main>#pre-translation {}
+        
+        main>#after-translation {}
+        /* 页脚样式 */
+        
+        footer {
+            text-align: center;
+            margin-top: 10px;
+            /* border-top: 5px solid black; */
+            border-bottom: 3px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 页眉 -->
+    <header>
+        <h1>百度api在线翻译</h1>
+    </header>
+    <!-- 导航栏 -->
+    <nav>
+        <select>
+            <option value="zh">中文</option>
+            <option value="en">英文</option>
+            <option value="wyw">文言文</option>
+        </select>
+        <span>⇆</span>
+        <select>
+            <option value="en">英文</option>
+            <option value="wyw">文言文</option>
+            <option value="zh">中文</option>
+        </select>
+        <button>翻译</button>
+    </nav>
+    <!-- 主体 -->
+    <main>
+        <!-- 原文 -->
+        <textarea id="preTranslation" name="preTranslation" rows="20" placeholder="原文"></textarea>
+        <!-- 译文 -->
+        <textarea id="afterTranslation" name="afterTranslation" rows="20"></textarea>
+    </main>
+    <!-- 页脚 -->
+    <footer>
+        © 2022年4月2日 by 一只s爱吃萝卜的小兔子（csdn作者）
+    </footer>
+
+    <script src="./md5.js"></script>
+    <script>
+        const selectTranslation = document.querySelectorAll('select');
+        // console.log(selectTranslation[0].value)
+        // console.log(selectTranslation[1].value)
+        const preTranslation = document.querySelector('#preTranslation');
+        const afterTranslation = document.querySelector('#afterTranslation');
+        const translationBtn = document.querySelector('button');
+        const textArea = document.querySelectorAll('textarea');
+
+
+
+
+
+
+        translationBtn.addEventListener('click', translation);
+
+        function translation() {
+            let url = requestURL(); //√
+            console.log(url);
+
+            // 请求对象
+            const myHeaders = new Headers();
+
+            myHeaders.append('Content-Type', 'application/json');
+            // myHeaders.append('Content-Type', 'application/x-www-form-urlencoded');
+
+            const myRequest = new Request(url, {
+                method: 'GET',
+                headers: {
+                    'Accept': 'application/json, text/plain, */*',
+                    'Content-Type': 'application/json'
+                },
+                mode: 'no-cors',
+                cache: 'default',
+            });
+
+
+            fetch(myRequest)
+                .then(function(response) {
+                    console.log(response.body)
+                    if (!response.ok) {
+                        throw new Error(`Http error: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    console.log(data);
+                })
+                .catch(err => {
+                    console.error(`Fetch problem: ${err.message}`);
+                });
+        }
+
+        function requestURL() {
+            let appid = '20220402001154877';
+            let key = 'JOIbUhIHK9OBx2tke89O';
+            let salt = (new Date).getTime();
+            // console.log(salt)
+            // 多个query可以用\n连接  如 query='apple\norange\nbanana\npear'
+            let query = requestContext(); // √
+            let from = selectTranslation[0].value;
+            let to = selectTranslation[1].value;
+            let str1 = appid + query + salt + key;
+            let sign = MD5(str1);
+            // console.log(sign);
+            let result = 'http://api.fanyi.baidu.com/api/trans/vip/translate?' +
+                `q=${query}&from=${from}&to=${to}&appid=${appid}&salt=${salt}&sign=${sign}`;
+            return result;
+        }
+
+        function requestContext() {
+            return preTranslation.value.replace(/\r\n/g, '\\n').replace(/\n/g, '\\n');
+        }
+
+        window.onkeydown = (e) => {
+            switch (e.key) {
+                case 'Enter':
+                    translation();
+                    break;
+            }
+        }
+    </script>
+</body>
+
+</html>

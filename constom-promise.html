@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自定义promise</title>
+</head>
+
+<body>
+
+    <script>
+        function timeoutPromise(message, interval) {
+            return new Promise((resolve, reject) => {
+                if (message === '' || typeof message !== 'string') {
+                    reject('Message is empty or not a string');
+                } else if (interval < 0 || typeof interval !== 'number') {
+                    reject('Interval is negative or not a number');
+                } else {
+                    setTimeout(function() {
+                        resolve(message);
+                    }, interval);
+                }
+            });
+        };
+
+        timeoutPromise('Hello there!', 1000)
+            .then(message => {
+                alert(message);
+            })
+            .catch(e => {
+                console.log('Error: ' + e);
+            });
+        // let timeoutPromise = new Promise((resolve, reject) => {
+        //     setTimeout(function() {
+        //         resolve('Success!');
+        //     }, 2000);
+        // })
+
+        // timeoutPromise
+        //     .then(message => {
+        //         alert(message);
+        //     })
+        //     等价于
+        //     timeoutPromise.then(alert);
+    </script>
+</body>
+
+</html>

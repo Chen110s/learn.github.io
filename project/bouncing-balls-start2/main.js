@@ -147,6 +147,7 @@ EvilCircle.prototype.setControls = function() {
             case 'a':
             case 'A':
             case 'ArrowLeft':
+
                 this.x -= this.velX;
                 break;
             case 'd':

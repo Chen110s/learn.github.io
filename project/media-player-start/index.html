@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Video player example</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+    <!-- 整个播放器 -->
+    <div class="player">
+        <video controls>
+        <!-- 提供两种格式的视频供浏览器加载 -->
+        <source src="video/sintel-short.mp4" type="video/mp4" />
+        <source src="video/sintel-short.mp4" type="video/webm" />
+        <p>您的浏览器不支持video视频功能。</p>
+      </video>
+
+        <div class="controls">
+            <button class="play" data-icon="P" aria-label="play pause toggle"></button>
+            <button class="stop" data-icon="S" aria-label="stop"></button>
+            <!-- 计时器:播放时长 -->
+            <div class="timer">
+                <!-- 进度条 -->
+                <div></div>
+                <!-- 分秒 -->
+                <span aria-label="timer">00:00</span>
+            </div>
+            <button class="rwd" data-icon="B" aria-label="rewind"></button>
+            <button class="fwd" data-icon="F" aria-label="fast forward"></button>
+        </div>
+    </div>
+
+    <p>
+        Sintel &copy; copyright Blender Foundation |
+        <a href="http://www.sintel.org">www.sintel.org</a>.
+    </p>
+    <script src="custom-player.js"></script>
+</body>
+
+</html>

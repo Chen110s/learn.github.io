@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object-oriented JavaScript inheritance</title>
+</head>
+
+<body>
+
+
+</body>
+
+<script>
+    // 父类 --------------------------------------------------
+    // 构造器内写属性
+    function Person(first, last, age, gender, interests) {
+        this.name = {
+            first,
+            last
+        };
+        this.aga = age;
+        this.gender = gender;
+        this.interests = interests;
+    }
+    // 原型上定义函数
+    Person.prototype.greeting = () => {
+        alert('Hi! I\'m ' + this.name.first + ' ' + this.name.last + '.');
+    }
+
+    // 子类 --------------------------------------------------
+    function Teacher(first, last, age, gender, interests, subject) {
+        Person.call(this, first, last, age, gender, interests); //从Person()中继承过来, this表明指向当前对象 
+
+        this.subject = subject;
+    }
+
+    // ******通过创建中间对象,将子类原型和父类原型分开, 不是同一个
+    Teacher.prototype = Object.create(Person.prototype);
+
+    // ******修复构造函数指向(构造函数执行自己)
+    Teacher.prototype.constructor = Teacher;
+
+    // 子类向原型添加共享方法
+    Teacher.prototype.greeting = function() {
+        var prefix; //n.前缀
+
+        if (this.gender === 'male' || this.gender === 'Male' || this.gender === 'm' || this.gender === 'M') {
+            prefix = 'Mr.';
+        } else if (this.gender === 'female' || this.gender === 'Female' || this.gender === 'f' || this.gender === 'F') {
+            prefix = 'Mrs.';
+        } else {
+            prefix = 'Mx.';
+        }
+
+        alert('Hello. My name is ' + prefix + ' ' + this.name.last + ', and I teach ' + this.subject + '.');
+    };
+
+    // 实例化
+    var teacher1 = new Teacher('明', '小', 32, 'male', ['唱', '跳', 'rap'], '数学');
+</script>
+
+</html>

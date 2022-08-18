@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ajax-start -- XHR</title>
+    <title>Ajax starting point</title>
+    <style>
+        html,
+        pre {
+            font-family: sans-serif;
+        }
+        
+        body {
+            width: 500px;
+            margin: 0 auto;
+            background-color: #ccc;
+        }
+        
+        pre {
+            line-height: 1.5;
+            letter-spacing: 0.05rem;
+            padding: 1rem;
+            background-color: white;
+        }
+        
+        label {
+            width: 200px;
+            margin-right: 33px;
+        }
+        
+        select {
+            width: 350px;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Ajax的起点</h1>
+
+    <form>
+        <label for="verse-choose">选择一个节</label>
+        <select id="verse-choose" name="verse-choose">
+            <option>Verse 1</option>
+            <option>Verse 2</option>
+            <option>Verse 3</option>
+            <option>Verse 4</option>
+        </select>
+    </form>
+
+    <h2>征服蠕虫，<em>埃德加·爱伦·坡，1843年</em></h2>
+
+    <pre>
+
+    </pre>
+
+    <script>
+        const verseChoose = document.querySelector('select');
+        const poemDisplay = document.querySelector('pre');
+
+        verseChoose.onchange = function() {
+            const verse = verseChoose.value;
+            updateDisplay(verse);
+        };
+
+        function updateDisplay(verse) {
+            verse = verse.replace(" ", "");
+            verse = verse.toLowerCase();
+            let url = verse + '.txt';
+
+            // let request = new XMLHttpRequest();
+            // request.open('GET', url);
+            // request.responseType = 'text';
+
+            // // 从网络获取资源是一个 "异步" 操作,等他结束才能继续操作
+            // request.onload = function() {
+            //     poemDisplay.textContent = request.response;
+            // }
+
+            // request.send();
+
+            // --------------------------------------------------
+            fetch(url)
+                .then(response => response.text()) //返回原始文本
+                .then((text) => {
+                    poemDisplay.textContent = text;
+                })
+        }
+
+        updateDisplay('Verse 1');
+        verseChoose.value = 'Verse 1';
+    </script>
+</body>
+
+</html>

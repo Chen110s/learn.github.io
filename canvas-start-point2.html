@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>canvas start point</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas class="myCanvas">
+        
+    </canvas>
+
+
+    <script>
+        // 画布的基础设置
+        // 1.对画布元素进行引用
+        const canvas = document.querySelector('.myCanvas');
+
+        // 2设置画布宽高
+        var width = canvas.width = window.innerWidth;
+        var height = canvas.height = window.innerHeight;
+
+        // 3.对画布的上下文引用并设置格式,用来绘图
+        const ctx = canvas.getContext('2d');
+
+        // 画布api
+        // 4.填充样式
+        // ctx.fillStyle = 'rgba(0,0,0,0.75)';
+
+        // 5.填充矩形
+        // ctx.fillRect(0, 0, width, height);
+
+        // 绘制线条
+        // 6.线条颜色,宽度
+        ctx.strokeStyle = 'rgb(255,0,255)'
+        ctx.lineWidth = 10;
+
+        // 7.绘制图形
+        // ctx.strokeRect(25, 25, 175, 200);
+
+
+
+        // window.onresize = function() {
+        //     let width = canvas.width = window.innerWidth;
+        //     let height = canvas.height = window.innerHeight;
+        //     ctx.fillRect(0, 0, width, height);
+        // }
+    </script>
+</body>
+
+</html>
